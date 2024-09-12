@@ -1,3 +1,5 @@
-const BlogPage = ({ params }) => <div>ID: {params.id}</div>;
+import { BlogPageProps } from "./types";
 
-export default BlogPage;
+export default function BlogPage({ params }: BlogPageProps) {
+  return <div>ID: {params.id}</div>;
+}
