@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { createContainer, Portal } from "@components/Portal";
 
 import { MODAL_CONTAINER_ID } from "./constants";
@@ -9,13 +9,10 @@ import { ModalProps } from "./types";
 import styles from "./modal.module.scss";
 
 export const Modal = ({ onClose, children }: ModalProps) => {
-  const [isMounted, setMounted] = useState(false);
-
   const rootRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     createContainer({ id: MODAL_CONTAINER_ID });
-    setMounted(true);
   }, []);
 
   useEffect(() => {
@@ -42,7 +39,6 @@ export const Modal = ({ onClose, children }: ModalProps) => {
     };
   }, [onClose]);
 
-  if (!isMounted) return null;
   return (
     <Portal id={MODAL_CONTAINER_ID}>
       <div ref={rootRef} className={styles.background}>
