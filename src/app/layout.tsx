@@ -1,7 +1,8 @@
+import { Header } from "@components/Header";
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 
-import "@styles/typography.module.scss";
+import "@styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Modsen Client Blog",
@@ -20,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sen.variable}`}>{children}</body>
+      <body className={`${sen.variable}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
