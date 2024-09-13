@@ -1,8 +1,8 @@
-import { Button } from "@components/Button";
+import { Button } from "@components/button/button";
 import typography from "@styles/typography.module.scss";
 
-import styles from "./banner.module.scss";
 import { BUTTON, TEXT, TITLE } from "./constants";
+import styles from "./join-our-team-banner.module.scss";
 
 export const JoinOurTeamBanner = () => (
   <div className={styles.banner}>

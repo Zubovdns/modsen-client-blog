@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-import { Button } from "@components/Button";
-import { FormInput } from "@components/FormInput";
-import { IconLink } from "@components/IconLink";
-import { NavLink } from "@components/NavLink";
+import { Button } from "@components/button/button";
+import { FormInput } from "@components/form-input/form-input";
+import { IconLink } from "@components/icon-link/icon-link";
+import { NavLink } from "@components/nav-link/nav-link";
 import FacebookIcon from "@public/icons/social-networks/facebook-icon.svg";
 import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
 import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";

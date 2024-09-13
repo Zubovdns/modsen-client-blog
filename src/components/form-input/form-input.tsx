@@ -1,6 +1,6 @@
 import typography from "@styles/typography.module.scss";
 
-import styles from "./input.module.scss";
+import styles from "./form-input.module.scss";
 import { FormInputProps } from "./types";
 
 export const FormInput = ({

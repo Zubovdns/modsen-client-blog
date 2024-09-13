@@ -1,1 +1,0 @@
-export { useModalOpen } from "./useModalOpen";
