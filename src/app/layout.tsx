@@ -1,9 +1,11 @@
+import "@styles/globals.scss";
+
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
+
+import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
 import { JoinOurTeamBanner } from "@components/JoinOurTeamBanner";
-
-import "@styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Modsen Client Blog",
@@ -26,6 +28,7 @@ export default function RootLayout({
         <Header />
         {children}
         <JoinOurTeamBanner />
+        <Footer />
       </body>
     </html>
   );
