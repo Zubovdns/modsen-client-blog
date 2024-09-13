@@ -12,6 +12,6 @@ export const Header = () => (
       <NavLink href="/about-us">About Us</NavLink>
       <NavLink href="/contact-us">Contact us</NavLink>
     </nav>
-    <Button label="Video about us" className={styles.button} />
+    <Button className={styles.button}>Video about us</Button>
   </header>
 );
