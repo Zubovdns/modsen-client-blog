@@ -1,10 +1,10 @@
 "use client";
 
-import { Video } from "@assets/video";
 import { Button } from "@components/Button";
 import { Modal } from "@components/Modal";
 import { NavLink } from "@components/NavLink";
 import { useModalOpen } from "@hooks/useModalOpen";
+import { Video } from "@public/video";
 
 import styles from "./header.module.scss";
 
