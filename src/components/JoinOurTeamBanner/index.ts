@@ -1,1 +1,0 @@
-export { JoinOurTeamBanner } from "./JoinOurTeamBanner";
