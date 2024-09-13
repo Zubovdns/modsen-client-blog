@@ -1,6 +1,6 @@
-import { Header } from "@components/Header";
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
+import { Header } from "@components/Header";
 
 import "@styles/globals.scss";
 

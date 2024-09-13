@@ -47,12 +47,12 @@
       "error",
       {
         "groups": [
-          ["^\\u0000"],
-          ["^react", "^@?\\w"],
-          ["^(@|components|utils|hooks|config|vendored-lib)(/.*|$)"],
-          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-          ["^.+\\.s?css$"]
+          ["^\\u0000"], // side effect imports
+          ["^react", "^next", "^@?\\w"], // external libraries
+          ["^(@|components|utils|hooks|config|vendored-lib)(/.*|$)"], // алиасы
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"], // parent imports
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"], // sibling imports
+          ["^.+\\.s?css$"] // CSS imports
         ]
       }
     ],
