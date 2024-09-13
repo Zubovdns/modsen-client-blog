@@ -1,28 +1,5 @@
 @import "@styles/variables";
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: $dark;
-}
-
-.title {
-  color: $white;
-  padding: 18px 56px;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  gap: 24px;
-
-  flex: 1;
-}
-
 .link {
   color: $white;
   position: relative;
@@ -48,14 +25,5 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-  }
-}
-
-.button {
-  background-color: $background-light;
-  margin: 0 31px;
-
-  &:hover {
-    background-color: $light-gray;
   }
 }
