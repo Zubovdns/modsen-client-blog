@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import { Header } from "@components/Header";
+import { JoinOurTeamBanner } from "@components/JoinOurTeamBanner";
 
 import "@styles/globals.scss";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${sen.variable}`}>
         <Header />
         {children}
+        <JoinOurTeamBanner />
       </body>
     </html>
   );
