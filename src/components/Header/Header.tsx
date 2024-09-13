@@ -1,4 +1,5 @@
 "use client";
+
 import { Video } from "@assets/video";
 import { Button } from "@components/Button";
 import { Modal } from "@components/Modal";
