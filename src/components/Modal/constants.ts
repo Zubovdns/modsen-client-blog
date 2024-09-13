@@ -1,1 +1,1 @@
-export const MODAL_CONTAINER_ID = 'modal-container-id';
+export const MODAL_CONTAINER_ID = "modal-container-id";
