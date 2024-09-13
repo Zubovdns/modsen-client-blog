@@ -1,0 +1,23 @@
+@import "@styles/variables";
+
+.input {
+  width: 100%;
+  padding: 14px 24px;
+  border: 1px solid $charcoal-gray;
+  background-color: inherit;
+  color: $white;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+  &::placeholder {
+    color: $charcoal-gray;
+  }
+
+  &:focus {
+    border-color: $slate-gray;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+  }
+}
