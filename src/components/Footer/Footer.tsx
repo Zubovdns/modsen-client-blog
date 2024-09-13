@@ -9,6 +9,27 @@ import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
 import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";
 import TwitterIcon from "@public/icons/social-networks/twitter-icon.svg";
 
+import {
+  ABOUT_US,
+  BLOG,
+  BOTTOM_TEXT_1,
+  BOTTOM_TEXT_2,
+  BUTTON,
+  CONTACT_US,
+  FACEBOOK_ALT,
+  FACEBOOK_LINK,
+  HOME,
+  INPUT_PLACEHOLDER,
+  INSTAGRAM_ALT,
+  INSTAGRAM_LINK,
+  LINKEDIN_ALT,
+  LINKEDIN_LINK,
+  MIDDLE_TITLE,
+  TOP_TITLE,
+  TWITTER_ALT,
+  TWITTER_LINK,
+} from "./constants";
+
 import styles from "./footer.module.scss";
 import typography from "@styles/typography.module.scss";
 
@@ -22,43 +43,53 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.topContainer}>
-        <h6>Modsen Client Blog</h6>
+        <h6>{TOP_TITLE}</h6>
         <nav className={styles.navbar}>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/blog">Blog</NavLink>
-          <NavLink href="/about-us">About Us</NavLink>
-          <NavLink href="/contact-us">Contact us</NavLink>
+          <NavLink href="/">{HOME}</NavLink>
+          <NavLink href="/blog">{BLOG}</NavLink>
+          <NavLink href="/about-us">{ABOUT_US}</NavLink>
+          <NavLink href="/contact-us">{CONTACT_US}</NavLink>
         </nav>
       </div>
       <div className={styles.middleContainer}>
-        <h3 className={styles.title}>
-          Subscribe to our news letter to get latest updates and news
-        </h3>
+        <h3 className={styles.title}>{MIDDLE_TITLE}</h3>
         <div className={styles.inputContainer}>
           <FormInput
             className={styles.button}
             value={email}
             onChange={handleInputChange}
             type="email"
-            placeholder="Enter Your Email"
+            placeholder={INPUT_PLACEHOLDER}
           />
-          <Button>Subscribe</Button>
+          <Button>{BUTTON}</Button>
         </div>
       </div>
       <div className={styles.bottomContainer}>
         <div className={`${styles.textContainer}`}>
           <p className={`${typography.body01} ${styles.text}`}>
-            Finstreet 118 2561 Fintown
+            {BOTTOM_TEXT_1}
           </p>
           <p className={`${typography.body01} ${styles.text}`}>
-            Hello@finsweet.com 020 7993 2905
+            {BOTTOM_TEXT_2}
           </p>
         </div>
         <div className={styles.socialNetworkContainer}>
-          <IconLink alt="Facebook icon" href="/" icon={FacebookIcon} />
-          <IconLink alt="Twitter icon" href="/" icon={TwitterIcon} />
-          <IconLink alt="Instagram icon" href="/" icon={InstagramIcon} />
-          <IconLink alt="LinkedIn icon" href="/" icon={LinkedInIcon} />
+          <IconLink
+            alt={FACEBOOK_ALT}
+            href={FACEBOOK_LINK}
+            icon={FacebookIcon}
+          />
+          <IconLink alt={TWITTER_ALT} href={TWITTER_LINK} icon={TwitterIcon} />
+          <IconLink
+            alt={INSTAGRAM_ALT}
+            href={INSTAGRAM_LINK}
+            icon={InstagramIcon}
+          />
+          <IconLink
+            alt={LINKEDIN_ALT}
+            href={LINKEDIN_LINK}
+            icon={LinkedInIcon}
+          />
         </div>
       </div>
     </footer>
