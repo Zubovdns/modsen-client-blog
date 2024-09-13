@@ -1,0 +1,1 @@
+export { JoinOurTeamBanner } from "./JoinOurTeamBanner";
