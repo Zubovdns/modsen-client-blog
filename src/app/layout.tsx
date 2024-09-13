@@ -3,8 +3,8 @@ import "@styles/globals.scss";
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 
-import { Footer } from "@components/footer/footer";
-import { Header } from "@components/header/header";
+import { Footer } from "@components/footer_tmp/footer";
+import { Header } from "@components/header_tmp/header";
 import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
 
 export const metadata: Metadata = {

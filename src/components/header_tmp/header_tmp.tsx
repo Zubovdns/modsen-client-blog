@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@components/button/button";
-import { Modal } from "@components/modal/modal";
+import { Modal } from "@components/modal_tmp/Modal";
 import { NavLink } from "@components/nav-link/nav-link";
 import { useModalOpen } from "@hooks/use-modal-open/use-modal-open";
 import { Video } from "@public/video";
