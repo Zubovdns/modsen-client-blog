@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
+import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
 
 import "@styles/globals.scss";
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${sen.variable}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
