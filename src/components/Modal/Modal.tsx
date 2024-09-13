@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useLayoutEffect, useRef } from "react";
+
 import { createContainer, Portal } from "@components/Portal";
 
 import { MODAL_CONTAINER_ID } from "./constants";
