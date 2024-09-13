@@ -1,7 +1,7 @@
-import { FormInputProps } from "./types";
+import typography from "@styles/typography.module.scss";
 
 import styles from "./input.module.scss";
-import typography from "@styles/typography.module.scss";
+import { FormInputProps } from "./types";
 
 export const FormInput = ({
   className,

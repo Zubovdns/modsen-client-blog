@@ -1,9 +1,9 @@
+import "@styles/globals.scss";
+
 import type { Metadata } from "next";
 import { Sen } from "next/font/google";
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
-
-import "@styles/globals.scss";
 
 export const metadata: Metadata = {
   title: "Modsen Client Blog",

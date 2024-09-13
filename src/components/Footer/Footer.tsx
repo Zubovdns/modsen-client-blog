@@ -8,6 +8,7 @@ import FacebookIcon from "@public/icons/social-networks/facebook-icon.svg";
 import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
 import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";
 import TwitterIcon from "@public/icons/social-networks/twitter-icon.svg";
+import typography from "@styles/typography.module.scss";
 
 import {
   ABOUT_US,
@@ -29,9 +30,7 @@ import {
   TWITTER_ALT,
   TWITTER_LINK,
 } from "./constants";
-
 import styles from "./footer.module.scss";
-import typography from "@styles/typography.module.scss";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");

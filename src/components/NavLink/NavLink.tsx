@@ -1,9 +1,8 @@
 import Link from "next/link";
-
-import { LinkProps } from "./types";
+import typography from "@styles/typography.module.scss";
 
 import styles from "./link.module.scss";
-import typography from "@styles/typography.module.scss";
+import { LinkProps } from "./types";
 
 export const NavLink = ({ className, href, children }: LinkProps) => (
   <Link
