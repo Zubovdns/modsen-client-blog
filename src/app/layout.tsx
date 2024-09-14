@@ -26,7 +26,6 @@ export default function RootLayout({
       <body className={`${sen.variable}`}>
         <Header />
         {children}
-
         <Footer />
       </body>
     </html>
