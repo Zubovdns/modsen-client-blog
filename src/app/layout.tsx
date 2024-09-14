@@ -5,7 +5,6 @@ import { Sen } from "next/font/google";
 
 import { Footer } from "@components/footer/footer";
 import { Header } from "@components/header/header";
-import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
 
 export const metadata: Metadata = {
   title: "Modsen Client Blog",
@@ -27,7 +26,7 @@ export default function RootLayout({
       <body className={`${sen.variable}`}>
         <Header />
         {children}
-        <JoinOurTeamBanner />
+
         <Footer />
       </body>
     </html>
