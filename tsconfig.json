@@ -32,7 +32,9 @@
       "@app/*": ["./src/app/*"],
       "@styles/*": ["./src/styles/*"],
       "@components/*": ["./src/components/*"],
+      "@interfaces/*": ["./src/interfaces/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@utils/*": ["./src/utils/*"],
       "@/*": ["./src/*"],
       "@public/*": ["./public/*"]
     }
