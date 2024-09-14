@@ -1,0 +1,73 @@
+@import "@styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: relative;
+
+  margin: 0 80px;
+}
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  gap: 82px;
+  padding: 96px 80px;
+
+  background-color: $lavenderBlush;
+}
+
+.topBar {
+  display: flex;
+  width: 75%;
+  height: 23px;
+}
+
+.yellowBar {
+  background-color: $golden-yellow;
+  width: 75%;
+}
+
+.purpleBar {
+  background-color: $deep-violet;
+  width: 25%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  flex: 1;
+
+  text-align: left;
+
+  gap: 16px;
+}
+
+.heading {
+  letter-spacing: 3px;
+  color: $slate-gray;
+  font-weight: 600;
+}
+
+.title {
+  color: $dark;
+}
+
+.description {
+  color: $slate-gray;
+}
+
+.link {
+  font-weight: 700;
+  color: $deep-violet;
+}
