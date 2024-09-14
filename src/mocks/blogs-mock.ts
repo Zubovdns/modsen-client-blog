@@ -10,7 +10,7 @@ export const blog_mock: Blog[] = [
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
     title_image:
-      "https://fastly.picsum.photos/id/625/2005/1500.jpg?hmac=NjvKqXa5v1XAOPRV9wseRkBmh-8fLaAT74tkHxd7CbU",
+      "https://fastly.picsum.photos/id/961/2000/1500.jpg?hmac=xnqH3hZembbq7kLFE8V0Lj-RVw_9MIaMX-XZppB42i8",
     description:
       "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
     content:
