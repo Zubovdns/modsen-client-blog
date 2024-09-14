@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 
 import typography from "@styles/typography.module.scss";
