@@ -15,8 +15,7 @@ export const HomeBanner = async () => (
       className={styles.image}
       alt="Home banner image"
       src={title_blog.title_image}
-      layout="fill"
-      objectFit="cover"
+      fill
       priority
     />
     <div className={styles.overlay}></div>
