@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint && npx eslint . --ext .ts,.tsx,.js,.jsx",
     "lint:fix": "next lint --fix && prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
     "prepare": "husky install",
@@ -45,7 +45,7 @@
     "prettier": "^3.3.3",
     "sass": "^1.78.0",
     "storybook": "^8.3.0",
-    "typescript": "^5"
+    "typescript": "5.5.x"
   },
   "husky": {
     "hooks": {
