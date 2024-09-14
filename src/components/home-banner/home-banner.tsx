@@ -6,7 +6,7 @@ import { Button } from "@components/button/button";
 import { NavLink } from "@components/nav-link/nav-link";
 import typography from "@styles/typography.module.scss";
 
-import { BUTTON } from "./constants";
+import { BUTTON, BY, POSTED_ON, SEPARATOR } from "./constants";
 import styles from "./home-banner.module.scss";
 
 export const HomeBanner = async () => (
@@ -21,18 +21,20 @@ export const HomeBanner = async () => (
     <div className={styles.overlay}></div>
     <div className={styles.content}>
       <p className={`${typography.body01} ${styles.header}`}>
-        POSTED ON <span className={styles.category}>{title_blog.category}</span>
+        {POSTED_ON}
+        <span className={styles.category}>{title_blog.category}</span>
       </p>
       <h1 className={styles.title}>{title_blog.title}</h1>
       <p className={`${typography.body01} ${styles.metaInfo}`}>
-        By{" "}
+        {BY}
         <NavLink
           className={styles.author}
           href={`/author/${title_blog.author.id}`}
         >
           {title_blog.author.name}
-        </NavLink>{" "}
-        | <span>{formattedDate(title_blog.publish_date)}</span>
+        </NavLink>
+        {SEPARATOR}
+        <span>{formattedDate(title_blog.publish_date)}</span>
       </p>
       <p className={`${typography.body01} ${styles.description}`}>
         {title_blog.description}
