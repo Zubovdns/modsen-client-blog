@@ -6,6 +6,15 @@
   justify-content: center;
 
   background-color: $dark;
+
+  .button {
+    background-color: $background-light;
+    margin: 0 31px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
 }
 
 .title {
@@ -48,14 +57,5 @@
       transform: scaleX(1);
       transform-origin: left;
     }
-  }
-}
-
-.button {
-  background-color: $background-light;
-  margin: 0 31px;
-
-  &:hover {
-    background-color: $light-gray;
   }
 }
