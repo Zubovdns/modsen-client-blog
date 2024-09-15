@@ -66,6 +66,7 @@
       }
     }
   },
+
   "FeaturedIn": {
     "text-top": "We are",
     "text-bottom": "Featured in",
@@ -84,5 +85,11 @@
     "logo-5": {
       "alt": "Лого 5"
     }
+  },
+
+  "JoinOurTeam": {
+    "title": "Join our team to be a part of our story",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "button": "Join now"
   }
 }

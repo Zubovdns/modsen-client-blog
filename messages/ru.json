@@ -85,5 +85,11 @@
     "logo-5": {
       "alt": "Лого 5"
     }
+  },
+
+  "JoinOurTeam": {
+    "title": "Присоединяйся к нашей команде и стань частью нашей истории",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "button": "Присоединиться"
   }
 }
