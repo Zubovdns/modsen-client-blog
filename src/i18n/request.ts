@@ -4,11 +4,14 @@ import { getRequestConfig } from "next-intl/server";
 
 import { routing } from "./routing";
 
-export const requestConfig: ReturnType<typeof getRequestConfig> =
-  getRequestConfig(async ({ locale }) => {
+const requestConfig: ReturnType<typeof getRequestConfig> = getRequestConfig(
+  async ({ locale }) => {
     if (!routing.locales.includes(locale as any)) notFound();
 
     return {
       messages: (await import(`../../messages/${locale}.json`)).default,
     };
-  });
+  },
+);
+
+export default requestConfig;
