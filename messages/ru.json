@@ -1,6 +1,24 @@
 {
-  "HomePage": {
-    "title": "Привет мир!",
-    "about": "Прочитать о нас"
+  "Header": {
+    "title": "Блог клиента Modsen",
+    "video-about-us-button": "Видео про нас",
+    "nav": {
+      "home-link": {
+        "title": "Домой",
+        "href": "/"
+      },
+      "blog-link": {
+        "title": "Блог",
+        "href": "/blog"
+      },
+      "about-us-link": {
+        "title": "Про нас",
+        "href": "/about-us"
+      },
+      "contact-us-link": {
+        "title": "Контакты",
+        "href": "/contact-us"
+      }
+    }
   }
 }

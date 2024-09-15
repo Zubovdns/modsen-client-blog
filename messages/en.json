@@ -1,6 +1,24 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "Header": {
+    "title": "Modsen Client Blog",
+    "video-about-us-button": "Video about us",
+    "nav": {
+      "home-link": {
+        "title": "Home",
+        "href": "/"
+      },
+      "blog-link": {
+        "title": "Blog",
+        "href": "/blog"
+      },
+      "about-us-link": {
+        "title": "About us",
+        "href": "/about-us"
+      },
+      "contact-us-link": {
+        "title": "Contact us",
+        "href": "/contact-us"
+      }
+    }
   }
 }
