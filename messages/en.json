@@ -65,5 +65,24 @@
         "href": "https://www.instagram.com/"
       }
     }
+  },
+  "FeaturedIn": {
+    "text-top": "We are",
+    "text-bottom": "Featured in",
+    "logo-1": {
+      "alt": "Лого 1"
+    },
+    "logo-2": {
+      "alt": "Лого 2"
+    },
+    "logo-3": {
+      "alt": "Лого 3"
+    },
+    "logo-4": {
+      "alt": "Лого 4"
+    },
+    "logo-5": {
+      "alt": "Лого 5"
+    }
   }
 }
