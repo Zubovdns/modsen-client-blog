@@ -20,5 +20,50 @@
         "href": "/contact-us"
       }
     }
+  },
+
+  "Footer": {
+    "top-title": "Блог клиента Modsen",
+    "middle-title": "Подпишитесь, чтобы получать последние новости",
+    "nav": {
+      "home": {
+        "title": "Домой",
+        "href": "/"
+      },
+      "blog": {
+        "title": "Блог",
+        "href": "/blog"
+      },
+      "about-us": {
+        "title": "Про нас",
+        "href": "/about-us"
+      },
+      "contact-us": {
+        "title": "Контакты",
+        "href": "/contact-us"
+      }
+    },
+    "input-placeholder": "Введите свою почту",
+    "button": "Подписаться",
+    "bottom-text-1": "Finstreet 118 2561 Fintown",
+    "bottom-text-2": "Hello@finsweet.com 020 7993 2905",
+    "social-links": {
+      "facebook": {
+        "alt": "Иконка facebook",
+        "href": "https://www.facebook.com"
+      },
+      "twitter": {
+        "alt": "Иконка twitter",
+        "href": "https://x.com/"
+      },
+      "linkedin": {
+        "alt": "Иконка LinkedIn",
+        "href": "https://lt.linkedin.com/"
+      },
+      "instagram": {
+        "alt": "Иконка Instagram",
+        "href": "https://www.instagram.com/"
+      }
+    }
   }
 }
