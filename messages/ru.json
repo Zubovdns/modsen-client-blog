@@ -91,5 +91,15 @@
     "title": "Присоединяйся к нашей команде и стань частью нашей истории",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
     "button": "Присоединиться"
+  },
+
+  "FeaturePost": {
+    "posted-on": "Опубликовано в ",
+    "by": "От ",
+    "separator": " | ",
+    "button": "Читать дальше >",
+    "banner-image": {
+      "alt": "Home banner image"
+    }
   }
 }
