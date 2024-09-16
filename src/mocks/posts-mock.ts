@@ -2,7 +2,7 @@ import { Blog } from "@interfaces/blog.interface";
 
 import { author_mock } from "./authors-mock";
 
-export const blog_mock: Blog[] = [
+export const posts_mock: Blog[] = [
   {
     id: "1",
     category: "Startup",
@@ -18,4 +18,5 @@ export const blog_mock: Blog[] = [
   },
 ];
 
-export const title_blog = blog_mock[0];
+export const last_post = posts_mock[0];
+export const featured_post = posts_mock[0];
