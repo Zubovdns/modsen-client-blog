@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 import { featured_post, posts_mock } from "@/mocks/posts-mock";
 import { Button } from "@components/button/button";
@@ -10,34 +10,37 @@ import { formattedDate } from "@utils/formatDate";
 import styles from "./posts-banner.module.scss";
 
 export const PostsBanner = () => {
+  const t = useTranslations("PostsBanner");
   const locale = useLocale();
+
+  // ! добавить api
   const posts = posts_mock.slice(0, 4);
 
   return (
     <div className={styles.container}>
       <div className={styles.featuredContainer}>
         <div className={styles.featuredHeader}>
-          <h3>Featured post</h3>
+          <h3>{t("feature-post.title")}</h3>
         </div>
         <div className={styles.featuredPost}>
           <div className={styles.imageWrapper}>
             <Image
               className={styles.image}
-              alt="Featured post image"
+              alt={t("feature-post.image.image.alt")}
               src={featured_post.title_image}
               fill
             />
           </div>
           <div className={styles.featuredContent}>
             <p className={`${typography.body01} ${styles.metaInfo}`}>
-              {"By "}
+              {t("by")}
               <NavLink
                 className={styles.author}
                 href={`/author/${featured_post.author.id}`}
               >
                 {featured_post.author.name}
               </NavLink>
-              {" | "}
+              {t("separator")}
               <span>
                 {formattedDate(new Date(featured_post.publish_date), locale)}
               </span>
@@ -47,31 +50,31 @@ export const PostsBanner = () => {
               {featured_post.description}
             </p>
           </div>
-          <Button>{"Read more >"}</Button>
+          <Button>{t("feature-post.button.title")}</Button>
         </div>
       </div>
       <div className={styles.allContainer}>
         <div className={styles.allHeader}>
-          <h3>All post</h3>
+          <h3>{t("all-posts.title")}</h3>
           <NavLink
             className={`${typography.body01} ${styles.link}`}
-            href="/blog"
+            href={t("all-posts.link.href")}
           >
-            All posts
+            {t("all-posts.link.title")}
           </NavLink>
         </div>
         <div className={styles.allPosts}>
           {posts.map(({ id, publish_date, author, title }) => (
             <div key={id} className={styles.allItem}>
               <p className={`${typography.label} ${styles.metaInfo}`}>
-                {"By "}
+                {t("by")}
                 <NavLink
                   className={styles.author}
                   href={`/author/${author.id}`}
                 >
                   {author.name}
                 </NavLink>
-                {" | "}
+                {t("separator")}
                 <span>{formattedDate(new Date(publish_date), locale)}</span>
               </p>
               <h5>{title}</h5>
