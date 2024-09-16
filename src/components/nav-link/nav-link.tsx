@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import { Link } from "@i18n/routing";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./nav-link.module.scss";
