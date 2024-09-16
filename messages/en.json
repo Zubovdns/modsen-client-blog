@@ -1,0 +1,122 @@
+{
+  "Header": {
+    "title": "Modsen Client Blog",
+    "video-about-us-button": "Video about us",
+    "nav": {
+      "home-link": {
+        "title": "Home",
+        "href": "/"
+      },
+      "blog-link": {
+        "title": "Blog",
+        "href": "/blog"
+      },
+      "about-us-link": {
+        "title": "About us",
+        "href": "/about-us"
+      },
+      "contact-us-link": {
+        "title": "Contact us",
+        "href": "/contact-us"
+      }
+    }
+  },
+
+  "Footer": {
+    "top-title": "Modsen Client Blog",
+    "middle-title": "Subscribe to our news letter to get latest updates and news",
+    "nav": {
+      "home": {
+        "title": "Home",
+        "href": "/"
+      },
+      "blog": {
+        "title": "Blog",
+        "href": "/blog"
+      },
+      "about-us": {
+        "title": "About us",
+        "href": "/about-us"
+      },
+      "contact-us": {
+        "title": "Contact us",
+        "href": "/contact-us"
+      }
+    },
+    "input-placeholder": "Enter Your Email",
+    "button": "Subscribe",
+    "bottom-text-1": "Finstreet 118 2561 Fintown",
+    "bottom-text-2": "Hello@finsweet.com 020 7993 2905",
+    "social-links": {
+      "facebook": {
+        "alt": "Facebook icon",
+        "href": "https://www.facebook.com"
+      },
+      "twitter": {
+        "alt": "Twitter icon",
+        "href": "https://x.com/"
+      },
+      "linkedin": {
+        "alt": "LinkedIn icon",
+        "href": "https://lt.linkedin.com/"
+      },
+      "instagram": {
+        "alt": "Instagram icon",
+        "href": "https://www.instagram.com/"
+      }
+    }
+  },
+
+  "FeaturedIn": {
+    "text-top": "We are",
+    "text-bottom": "Featured in",
+    "logo-1": {
+      "alt": "Лого 1"
+    },
+    "logo-2": {
+      "alt": "Лого 2"
+    },
+    "logo-3": {
+      "alt": "Лого 3"
+    },
+    "logo-4": {
+      "alt": "Лого 4"
+    },
+    "logo-5": {
+      "alt": "Лого 5"
+    }
+  },
+
+  "JoinOurTeam": {
+    "title": "Join our team to be a part of our story",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+    "button": "Join now"
+  },
+
+  "FeaturePost": {
+    "posted-on": "Posted on ",
+    "by": "By ",
+    "separator": " | ",
+    "button": "Read more >",
+    "banner-image": {
+      "alt": "Home banner image"
+    }
+  },
+
+  "AboutUsBanner": {
+    "about-us": {
+      "heading": "ABOUT US",
+      "title": "We are a community of content writers who share their learnings",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "link": {
+        "title": "Read More >",
+        "href": "/about-us"
+      }
+    },
+    "our-mission": {
+      "heading": "OUR MISSION",
+      "title": "Creating valuable content for creatives all around the world",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    }
+  }
+}

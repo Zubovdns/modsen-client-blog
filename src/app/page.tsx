@@ -1,17 +1,7 @@
-import { FeaturedInBanner } from "@components/featured-in-banner/featured-in-banner";
-import { HomeAboutUsBanner } from "@components/home-about-us-banner/home-about-us-banner";
-import { HomeBanner } from "@components/home-banner/home-banner";
-import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
+import { redirect } from "next/navigation";
 
-import styles from "./page.module.scss";
+import { routing } from "@i18n/routing";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <HomeBanner />
-      <HomeAboutUsBanner />
-      <FeaturedInBanner />
-      <JoinOurTeamBanner />
-    </div>
-  );
+export default function RootPage() {
+  redirect(routing.defaultLocale);
 }
