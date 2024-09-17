@@ -139,5 +139,17 @@
         "href": "/blog"
       }
     }
+  },
+
+  "WhyWeStartedBanner": {
+    "header": "Почему мы начали",
+    "title": "Это начиналось как простая идея и превратилось в нашу страсть",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "button": {
+      "title": "Узнай нашу историю >"
+    },
+    "image": {
+      "alt": "Изображение почему мы начали"
+    }
   }
 }

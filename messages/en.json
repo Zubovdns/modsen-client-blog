@@ -142,5 +142,17 @@
         "href": "/blog"
       }
     }
+  },
+
+  "WhyWeStartedBanner": {
+    "header": "Why We Started",
+    "title": "It started out as a simple idea and evolved into our passion",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "button": {
+      "title": "Discover out story >"
+    },
+    "image": {
+      "alt": "Why we started image"
+    }
   }
 }
