@@ -24,11 +24,13 @@ export const HomeBanner = () => {
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <p className={`${typography.body1} ${styles.header}`}>
+        <p className={`${typography.cap}`}>
           {t("posted-on")}
           <span className={styles.category}>{last_post.category}</span>
         </p>
-        <h1 className={styles.title}>{last_post.title}</h1>
+        <h1 className={`${typography.Display} ${styles.title}`}>
+          {last_post.title}
+        </h1>
         <p className={`${typography.body1} ${styles.metaInfo}`}>
           {t("by")}
           <NavLink
