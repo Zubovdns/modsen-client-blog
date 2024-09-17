@@ -1,0 +1,11 @@
+@import "@styles/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 32px;
+
+  margin: 0 80px;
+}
