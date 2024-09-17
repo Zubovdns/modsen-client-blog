@@ -118,5 +118,29 @@
       "title": "Creating valuable content for creatives all around the world",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
+  },
+
+  "PostsBanner": {
+    "by": "By ",
+    "separator": " | ",
+    "feature-post": {
+      "title": "Featured post",
+      "image": {
+        "alt": "Featured post image"
+      },
+      "button": {
+        "title": "Read more >"
+      }
+    },
+    "all-posts": {
+      "title": "All posts",
+      "image": {
+        "alt": "Post image "
+      },
+      "link": {
+        "title": "View posts",
+        "href": "/blog"
+      }
+    }
   }
 }
