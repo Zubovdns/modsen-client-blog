@@ -1,7 +1,7 @@
 import "@styles/globals.scss";
 
 import type { Metadata } from "next";
-import { Sen } from "next/font/google";
+import { Inter, Sen } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
@@ -15,7 +15,12 @@ export const metadata: Metadata = {
 
 const sen = Sen({
   subsets: ["latin"],
-  variable: "--font-san",
+  variable: "--font-sen",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 type RootLayoutProps = Readonly<{
@@ -33,7 +38,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${sen.variable}`}>
+      <body className={`${sen.variable} ${inter.variable}`}>
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

@@ -22,10 +22,12 @@ export const WhyWeStartedBanner = () => {
       </div>
 
       <div className={styles.content}>
-        <p className={styles.header}>{t("header")}</p>
+        <p className={typography.cap}>{t("header")}</p>
         <div className={styles.text}>
-          <h2>{t("title")}</h2>
-          <p className={`${typography.body01}`}>{t("description")}</p>
+          <h1 className={typography.Heading1}>{t("title")}</h1>
+          <p className={`${typography.body01} ${styles.description}`}>
+            {t("description")}
+          </p>
         </div>
         <Button>{t("button.title")}</Button>
       </div>

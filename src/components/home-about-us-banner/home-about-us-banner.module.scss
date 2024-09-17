@@ -21,7 +21,7 @@
   gap: 82px;
   padding: 96px 80px;
 
-  background-color: $lavenderBlush;
+  background-color: $lavender;
 }
 
 .topBar {
@@ -31,12 +31,12 @@
 }
 
 .yellowBar {
-  background-color: $golden-yellow;
+  background-color: $yellow;
   width: 75%;
 }
 
 .purpleBar {
-  background-color: $deep-violet;
+  background-color: $purple;
   width: 25%;
 }
 
@@ -54,20 +54,14 @@
 }
 
 .heading {
-  letter-spacing: 3px;
-  color: $slate-gray;
-  font-weight: 600;
-}
-
-.title {
-  color: $dark;
+  color: $medium-gray;
 }
 
 .description {
-  color: $slate-gray;
+  color: $medium-gray;
 }
 
 .link {
   font-weight: 700;
-  color: $deep-violet;
+  color: $purple;
 }

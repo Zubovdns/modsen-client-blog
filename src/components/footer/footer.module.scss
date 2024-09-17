@@ -8,8 +8,8 @@
 
   padding: 52px 80px;
 
-  background-color: $dark;
-  color: $white;
+  background-color: $black;
+  color: $light;
 }
 
 .topContainer {
@@ -27,7 +27,7 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  background-color: $darkSlateBlue;
+  background-color: $dark-blue;
 
   margin: 48px 0;
   padding: 80px 64px;
@@ -51,7 +51,7 @@
 }
 
 .text {
-  color: $slate-gray;
+  color: $medium-gray;
 }
 
 .inputContainer {
