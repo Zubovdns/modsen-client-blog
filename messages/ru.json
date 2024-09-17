@@ -120,6 +120,27 @@
     }
   },
 
+  "PostsBanner": {
+    "by": "От ",
+    "separator": " | ",
+    "feature-post": {
+      "title": "Избранный пост",
+      "image": {
+        "alt": "Изображение избранного поста"
+      },
+      "button": {
+        "title": "Читать дальше >"
+      }
+    },
+    "all-posts": {
+      "title": "Все посты",
+      "link": {
+        "title": "Открыть блог",
+        "href": "/blog"
+      }
+    }
+  },
+
   "CategorySelector": {
     "title": "Выберите категорию",
     "startup": {

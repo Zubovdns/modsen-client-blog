@@ -120,6 +120,30 @@
     }
   },
 
+  "PostsBanner": {
+    "by": "By ",
+    "separator": " | ",
+    "feature-post": {
+      "title": "Featured post",
+      "image": {
+        "alt": "Featured post image"
+      },
+      "button": {
+        "title": "Read more >"
+      }
+    },
+    "all-posts": {
+      "title": "All posts",
+      "image": {
+        "alt": "Post image "
+      },
+      "link": {
+        "title": "View posts",
+        "href": "/blog"
+      }
+    }
+  },
+
   "Categories": {
     "chooseCategory": "Choose A Category",
     "Startup": {
