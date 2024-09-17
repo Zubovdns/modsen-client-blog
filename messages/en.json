@@ -118,5 +118,37 @@
       "title": "Creating valuable content for creatives all around the world",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
+  },
+
+  "Categories": {
+    "chooseCategory": "Choose A Category",
+    "Startup": {
+      "title": "Startup",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Startup icon"
+      }
+    },
+    "Business": {
+      "title": "Business",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Business icon"
+      }
+    },
+    "Economy": {
+      "title": "Economy",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Economy icon"
+      }
+    },
+    "Technology": {
+      "title": "Technology",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Technology icon"
+      }
+    }
   }
 }

@@ -5,7 +5,7 @@ import { author_mock } from "./authors-mock";
 export const blog_mock: Blog[] = [
   {
     id: "1",
-    category: "Startup",
+    category: "startup",
     author: author_mock,
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",

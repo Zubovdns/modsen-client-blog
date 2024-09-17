@@ -5,43 +5,23 @@ import StartupIcon from "@public/icons/categories/startup-icon.svg";
 import TechnologyIcon from "@public/icons/categories/technology-icon.svg";
 
 export const categories: {
-  name: category;
-  icon: {
-    src: string;
-    alt: string;
-  };
-  description: string;
+  category: category;
+  icon: string;
 }[] = [
   {
-    name: "Startup",
-    icon: {
-      src: StartupIcon,
-      alt: "Startup icon",
-    },
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    category: "startup",
+    icon: StartupIcon,
   },
   {
-    name: "Business",
-    icon: {
-      src: BusinessIcon,
-      alt: "Business icon",
-    },
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    category: "business",
+    icon: BusinessIcon,
   },
   {
-    name: "Economy",
-    icon: {
-      src: EconomyIcon,
-      alt: "Economy icon",
-    },
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    category: "economy",
+    icon: EconomyIcon,
   },
   {
-    name: "Technology",
-    icon: {
-      src: TechnologyIcon,
-      alt: "Technology icon",
-    },
-    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    category: "technology",
+    icon: TechnologyIcon,
   },
 ];
