@@ -145,7 +145,7 @@
   },
 
   "CategorySelector": {
-    "chooseCategory": "Choose A Category",
+    "title": "Choose A Category",
     "startup": {
       "title": "Startup",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
