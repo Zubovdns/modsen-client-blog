@@ -10,8 +10,8 @@ export const JoinOurTeamBanner = () => {
 
   return (
     <div className={styles.banner}>
-      <h4 className={styles.title}>{t("title")}</h4>
-      <p className={`${typography.body01} ${styles.text}`}>{t("text")}</p>
+      <h4 className={`${typography.Heading2} ${styles.title}`}>{t("title")}</h4>
+      <p className={`${typography.body1} ${styles.text}`}>{t("text")}</p>
       <Button className={styles.button}>{t("button")}</Button>
     </div>
   );

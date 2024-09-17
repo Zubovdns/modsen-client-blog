@@ -31,7 +31,7 @@
   position: relative;
   z-index: 3;
   padding: 128px 80px 192px 80px;
-  color: $white;
+  color: $light;
 
   display: flex;
   flex-direction: column;
@@ -39,11 +39,6 @@
   justify-content: flex-start;
 
   gap: 16px;
-}
-
-.header {
-  text-transform: uppercase;
-  letter-spacing: 3px;
 }
 
 .category {
@@ -62,7 +57,7 @@
 }
 
 .author {
-  color: $golden-yellow;
+  color: $yellow;
 }
 
 .description {

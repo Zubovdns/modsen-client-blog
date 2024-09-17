@@ -7,6 +7,7 @@ import { Modal } from "@components/modal/modal";
 import { NavLink } from "@components/nav-link/nav-link";
 import { useModalOpen } from "@hooks/use-modal-open/use-modal-open";
 import { Video } from "@public/video";
+import typography from "@styles/typography.module.scss";
 
 import styles from "./header.module.scss";
 
@@ -17,8 +18,8 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h4 className={styles.title}>{t("title")}</h4>
-      <nav className={styles.navbar}>
+      <h4 className={`${typography.Heading4} ${styles.title}`}>{t("title")}</h4>
+      <nav className={`${styles.navbar}`}>
         <NavLink href={t("nav.home-link.href")}>
           {t("nav.home-link.title")}
         </NavLink>
