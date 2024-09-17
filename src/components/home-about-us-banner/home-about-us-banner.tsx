@@ -17,10 +17,10 @@ export const HomeAboutUsBanner = () => {
 
       <div className={styles.content}>
         <div className={`${styles.section}`}>
-          <p className={`${typography.body1} ${styles.heading}`}>
+          <p className={`${typography.cap} ${styles.heading}`}>
             {t("about-us.heading")}
           </p>
-          <h3 className={styles.title}>{t("about-us.title")}</h3>
+          <h2 className={`${typography.Heading2}`}>{t("about-us.title")}</h2>
           <p className={`${typography.body1} ${styles.description}`}>
             {t("about-us.description")}
           </p>
@@ -30,10 +30,10 @@ export const HomeAboutUsBanner = () => {
         </div>
 
         <div className={`${styles.section}`}>
-          <p className={`${typography.body1} ${styles.heading}`}>
+          <p className={`${typography.cap} ${styles.heading}`}>
             {t("our-mission.heading")}
           </p>
-          <h4 className={styles.title}>{t("our-mission.title")}</h4>
+          <h3 className={`${typography.Heading3}`}>{t("our-mission.title")}</h3>
           <p className={`${typography.body1} ${styles.description}`}>
             {t("our-mission.description")}
           </p>
