@@ -1,3 +1,4 @@
+import { CategorySelector } from "@components/category-selector/category-selector";
 import { FeaturedInBanner } from "@components/featured-in-banner/featured-in-banner";
 import { HomeAboutUsBanner } from "@components/home-about-us-banner/home-about-us-banner";
 import { HomeBanner } from "@components/home-banner/home-banner";
@@ -10,6 +11,7 @@ export default function Home() {
     <div className={styles.page}>
       <HomeBanner />
       <HomeAboutUsBanner />
+      <CategorySelector />
       <FeaturedInBanner />
       <JoinOurTeamBanner />
     </div>
