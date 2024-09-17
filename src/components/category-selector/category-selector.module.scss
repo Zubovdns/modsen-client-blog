@@ -34,13 +34,13 @@
 
   cursor: pointer;
 
-  border: 1px solid rgba($slate-gray, 0.3);
+  border: 1px solid rgba($medium-gray, 0.3);
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
 
   &:hover {
-    background-color: $golden-yellow;
+    background-color: $yellow;
     transform: scale(1.05);
   }
 }
@@ -68,6 +68,5 @@
 }
 
 .description {
-  color: $slate-gray;
-  line-height: 28px;
+  color: $medium-gray;
 }

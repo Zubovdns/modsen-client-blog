@@ -11,7 +11,7 @@ export const CategorySelector = () => {
 
   return (
     <div className={styles.container}>
-      <h3>{t("title")}</h3>
+      <h3 className={typography.Heading2}>{t("title")}</h3>
       <div className={styles.content}>
         {categories.map(({ category, icon }) => (
           <div className={styles.card} key={category}>
@@ -19,7 +19,7 @@ export const CategorySelector = () => {
               <Image src={icon} alt={t(`${category}.icon.alt`)} />
             </div>
             <div className={styles.text}>
-              <h4>{t(`${category}.title`)}</h4>
+              <h3 className={typography.Heading3}>{t(`${category}.title`)}</h3>
               <p className={`${typography.body1} ${styles.description}`}>
                 {t(`${category}.description`)}
               </p>
