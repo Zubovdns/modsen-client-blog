@@ -73,7 +73,7 @@ export const PostsBanner = () => {
                   {author.name}
                 </NavLink>
                 {t("separator")}
-                <span>{formattedDate(new Date(publish_date), locale)}</span>
+                <span>{formattedDate(publish_date, locale)}</span>
               </p>
               <h5>{title}</h5>
             </div>
