@@ -4,24 +4,17 @@ import EconomyIcon from "@public/icons/categories/economy-icon.svg";
 import StartupIcon from "@public/icons/categories/startup-icon.svg";
 import TechnologyIcon from "@public/icons/categories/technology-icon.svg";
 
-export const categories: {
-  category: category;
-  icon: string;
-}[] = [
-  {
-    category: "startup",
+export const categories: Record<category, { icon: string }> = {
+  startup: {
     icon: StartupIcon,
   },
-  {
-    category: "business",
+  business: {
     icon: BusinessIcon,
   },
-  {
-    category: "economy",
+  economy: {
     icon: EconomyIcon,
   },
-  {
-    category: "technology",
+  technology: {
     icon: TechnologyIcon,
   },
-];
+};

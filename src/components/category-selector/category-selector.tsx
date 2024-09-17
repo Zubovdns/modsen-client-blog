@@ -13,7 +13,7 @@ export const CategorySelector = () => {
     <div className={styles.container}>
       <h3 className={typography.Heading2}>{t("title")}</h3>
       <div className={styles.content}>
-        {categories.map(({ category, icon }) => (
+        {Object.entries(categories).map(([category, { icon }]) => (
           <div className={styles.card} key={category}>
             <div className={styles.iconWrapper}>
               <Image src={icon} alt={t(`${category}.icon.alt`)} />
