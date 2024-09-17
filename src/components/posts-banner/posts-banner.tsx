@@ -26,7 +26,7 @@ export const PostsBanner = () => {
           <div className={styles.imageWrapper}>
             <Image
               className={styles.image}
-              alt={t("feature-post.image.image.alt")}
+              alt={t("feature-post.image.alt")}
               src={featured_post.title_image}
               fill
             />
@@ -41,9 +41,7 @@ export const PostsBanner = () => {
                 {featured_post.author.name}
               </NavLink>
               {t("separator")}
-              <span>
-                {formattedDate(new Date(featured_post.publish_date), locale)}
-              </span>
+              <span>{formattedDate(featured_post.publish_date, locale)}</span>
             </p>
             <h4>{featured_post.title}</h4>
             <p className={`${typography.body01} ${styles.description}`}>
