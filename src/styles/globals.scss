@@ -94,7 +94,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 
-  font-family: $font-family-base;
+  font-family: $font-family-addition;
 }
 
 ol,
@@ -125,10 +125,10 @@ body {
 }
 
 body {
-  color: $foreground-dark;
+  color: $black;
   background: $background-light;
   line-height: 1.5;
-  font-family: $font-family-base;
+  font-family: $font-family-addition;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -148,40 +148,4 @@ img {
   max-width: 100%;
   display: block;
   height: auto;
-}
-
-h1 {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 64px;
-}
-
-h2 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 64px;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 48px;
-}
-
-h4 {
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 36px;
-}
-
-h5 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-}
-
-h6 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
 }

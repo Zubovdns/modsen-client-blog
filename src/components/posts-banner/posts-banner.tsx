@@ -20,7 +20,7 @@ export const PostsBanner = () => {
     <div className={styles.container}>
       <div className={styles.featuredContainer}>
         <div className={styles.featuredHeader}>
-          <h3>{t("feature-post.title")}</h3>
+          <h3 className={typography.Heading2}>{t("feature-post.title")}</h3>
         </div>
         <div className={styles.featuredPost}>
           <div className={styles.imageWrapper}>
@@ -32,7 +32,7 @@ export const PostsBanner = () => {
             />
           </div>
           <div className={styles.featuredContent}>
-            <p className={`${typography.body01} ${styles.metaInfo}`}>
+            <p className={`${typography.label} ${styles.metaInfo}`}>
               {t("by")}
               <NavLink
                 className={styles.author}
@@ -43,8 +43,8 @@ export const PostsBanner = () => {
               {t("separator")}
               <span>{formattedDate(featured_post.publish_date, locale)}</span>
             </p>
-            <h4>{featured_post.title}</h4>
-            <p className={`${typography.body01} ${styles.description}`}>
+            <h4 className={typography.Heading3}>{featured_post.title}</h4>
+            <p className={`${typography.body1} ${styles.description}`}>
               {featured_post.description}
             </p>
           </div>
@@ -53,9 +53,9 @@ export const PostsBanner = () => {
       </div>
       <div className={styles.allContainer}>
         <div className={styles.allHeader}>
-          <h3>{t("all-posts.title")}</h3>
+          <h3 className={typography.Heading2}>{t("all-posts.title")}</h3>
           <NavLink
-            className={`${typography.body01} ${styles.link}`}
+            className={`${typography.body1} ${styles.link}`}
             href={t("all-posts.link.href")}
           >
             {t("all-posts.link.title")}
@@ -75,7 +75,7 @@ export const PostsBanner = () => {
                 {t("separator")}
                 <span>{formattedDate(publish_date, locale)}</span>
               </p>
-              <h5>{title}</h5>
+              <h5 className={typography.Heading4}>{title}</h5>
             </div>
           ))}
         </div>

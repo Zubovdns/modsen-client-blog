@@ -1,19 +1,95 @@
 @import "./variables";
 
-.body01 {
-  font-weight: 400;
+.Display {
+  font-family: $font-family-base;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.Heading1 {
+  font-family: $font-family-base;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -2px;
+}
+
+.Heading2 {
+  font-family: $font-family-base;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -2px;
+}
+
+.Heading3 {
+  font-family: $font-family-base;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+}
+
+.Heading4 {
+  font-family: $font-family-base;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Heading5 {
+  font-family: $font-family-base;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.Heading6 {
+  font-family: $font-family-base;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.body1 {
+  font-family: $font-family-addition;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 28px;
 }
 
-.body02 {
-  font-weight: 400;
+.body2 {
+  font-family: $font-family-addition;
   font-size: 14px;
-  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 
 .label {
-  font-weight: 500;
+  font-family: $font-family-addition;
   font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 20px;
+}
+
+.cap {
+  font-family: $font-family-addition;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
 }

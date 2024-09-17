@@ -27,7 +27,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.topContainer}>
-        <h6>{t("top-title")}</h6>
+        <h4 className={typography.Heading4}>{t("top-title")}</h4>
         <nav className={styles.navbar}>
           <NavLink href={t("nav.home.href")}>{t("nav.home.title")}</NavLink>
           <NavLink href={t("nav.blog.href")}>{t("nav.blog.title")}</NavLink>
@@ -40,7 +40,9 @@ export const Footer = () => {
         </nav>
       </div>
       <div className={styles.middleContainer}>
-        <h3 className={styles.title}>{t("middle-title")}</h3>
+        <h2 className={`${typography.Heading2} ${styles.title}`}>
+          {t("middle-title")}
+        </h2>
         <div className={styles.inputContainer}>
           <FormInput
             className={styles.button}
@@ -54,10 +56,10 @@ export const Footer = () => {
       </div>
       <div className={styles.bottomContainer}>
         <div className={`${styles.textContainer}`}>
-          <p className={`${typography.body01} ${styles.text}`}>
+          <p className={`${typography.body1} ${styles.text}`}>
             {t("bottom-text-1")}
           </p>
-          <p className={`${typography.body01} ${styles.text}`}>
+          <p className={`${typography.body1} ${styles.text}`}>
             {t("bottom-text-2")}
           </p>
         </div>

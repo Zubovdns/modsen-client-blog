@@ -24,12 +24,14 @@ export const HomeBanner = () => {
       />
       <div className={styles.overlay}></div>
       <div className={styles.content}>
-        <p className={`${typography.body01} ${styles.header}`}>
+        <p className={`${typography.cap}`}>
           {t("posted-on")}
           <span className={styles.category}>{last_post.category}</span>
         </p>
-        <h1 className={styles.title}>{last_post.title}</h1>
-        <p className={`${typography.body01} ${styles.metaInfo}`}>
+        <h1 className={`${typography.Display} ${styles.title}`}>
+          {last_post.title}
+        </h1>
+        <p className={`${typography.body1} ${styles.metaInfo}`}>
           {t("by")}
           <NavLink
             className={styles.author}
@@ -40,7 +42,7 @@ export const HomeBanner = () => {
           {t("separator")}
           <span>{formattedDate(new Date(last_post.publish_date), locale)}</span>
         </p>
-        <p className={`${typography.body01} ${styles.description}`}>
+        <p className={`${typography.body1} ${styles.description}`}>
           {last_post.description}
         </p>
         <Button className={styles.button}>{t("button")}</Button>
