@@ -1,8 +1,8 @@
 @import "@styles/variables";
 
 .button {
-  background-color: $golden-yellow;
-  color: $dark;
+  background-color: $yellow;
+  color: $black;
   padding: 16px 48px;
   font-size: 16px;
   font-weight: 600;
@@ -17,7 +17,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: $mustard;
+    background-color: $dark-yellow;
     transform: scale(1.05);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }

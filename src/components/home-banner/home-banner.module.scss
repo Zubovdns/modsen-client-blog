@@ -31,7 +31,7 @@
   position: relative;
   z-index: 3;
   padding: 128px 80px 192px 80px;
-  color: $white;
+  color: $light;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +62,7 @@
 }
 
 .author {
-  color: $golden-yellow;
+  color: $yellow;
 }
 
 .description {

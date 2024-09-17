@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
 
-  background-color: $dark;
+  background-color: $black;
+  color: $light;
 
   .button {
     background-color: $background-light;
@@ -18,7 +19,6 @@
 }
 
 .title {
-  color: $white;
   padding: 18px 56px;
 }
 
@@ -30,32 +30,4 @@
   gap: 24px;
 
   flex: 1;
-}
-
-.link {
-  color: $white;
-  position: relative;
-  transition: color 0.3s ease;
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background-color: $white;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-    transform-origin: right;
-  }
-
-  &:hover {
-    color: lighten($white, 20%);
-
-    &::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
 }
