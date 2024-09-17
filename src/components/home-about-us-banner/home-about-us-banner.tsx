@@ -17,11 +17,11 @@ export const HomeAboutUsBanner = () => {
 
       <div className={styles.content}>
         <div className={`${styles.section}`}>
-          <p className={`${typography.body01} ${styles.heading}`}>
+          <p className={`${typography.body1} ${styles.heading}`}>
             {t("about-us.heading")}
           </p>
           <h3 className={styles.title}>{t("about-us.title")}</h3>
-          <p className={`${typography.body01} ${styles.description}`}>
+          <p className={`${typography.body1} ${styles.description}`}>
             {t("about-us.description")}
           </p>
           <NavLink href={t("about-us.link.href")} className={styles.link}>
@@ -30,11 +30,11 @@ export const HomeAboutUsBanner = () => {
         </div>
 
         <div className={`${styles.section}`}>
-          <p className={`${typography.body01} ${styles.heading}`}>
+          <p className={`${typography.body1} ${styles.heading}`}>
             {t("our-mission.heading")}
           </p>
           <h4 className={styles.title}>{t("our-mission.title")}</h4>
-          <p className={`${typography.body01} ${styles.description}`}>
+          <p className={`${typography.body1} ${styles.description}`}>
             {t("our-mission.description")}
           </p>
         </div>

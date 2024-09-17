@@ -19,7 +19,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <h4 className={`${typography.Heading4} ${styles.title}`}>{t("title")}</h4>
-      <nav className={styles.navbar}>
+      <nav className={`${typography.body1} ${styles.navbar}`}>
         <NavLink href={t("nav.home-link.href")}>
           {t("nav.home-link.title")}
         </NavLink>

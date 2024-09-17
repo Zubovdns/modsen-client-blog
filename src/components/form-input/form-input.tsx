@@ -11,7 +11,7 @@ export const FormInput = ({
   type,
 }: FormInputProps) => (
   <input
-    className={`${typography.body01} ${styles.input} ${className}`}
+    className={`${typography.body1} ${styles.input} ${className}`}
     type={type}
     placeholder={placeholder}
     value={value}

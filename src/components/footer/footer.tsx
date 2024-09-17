@@ -54,10 +54,10 @@ export const Footer = () => {
       </div>
       <div className={styles.bottomContainer}>
         <div className={`${styles.textContainer}`}>
-          <p className={`${typography.body01} ${styles.text}`}>
+          <p className={`${typography.body1} ${styles.text}`}>
             {t("bottom-text-1")}
           </p>
-          <p className={`${typography.body01} ${styles.text}`}>
+          <p className={`${typography.body1} ${styles.text}`}>
             {t("bottom-text-2")}
           </p>
         </div>

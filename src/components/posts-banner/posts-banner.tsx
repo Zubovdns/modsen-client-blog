@@ -32,7 +32,7 @@ export const PostsBanner = () => {
             />
           </div>
           <div className={styles.featuredContent}>
-            <p className={`${typography.body01} ${styles.metaInfo}`}>
+            <p className={`${typography.body1} ${styles.metaInfo}`}>
               {t("by")}
               <NavLink
                 className={styles.author}
@@ -44,7 +44,7 @@ export const PostsBanner = () => {
               <span>{formattedDate(featured_post.publish_date, locale)}</span>
             </p>
             <h4>{featured_post.title}</h4>
-            <p className={`${typography.body01} ${styles.description}`}>
+            <p className={`${typography.body1} ${styles.description}`}>
               {featured_post.description}
             </p>
           </div>
@@ -55,7 +55,7 @@ export const PostsBanner = () => {
         <div className={styles.allHeader}>
           <h3>{t("all-posts.title")}</h3>
           <NavLink
-            className={`${typography.body01} ${styles.link}`}
+            className={`${typography.body1} ${styles.link}`}
             href={t("all-posts.link.href")}
           >
             {t("all-posts.link.title")}
