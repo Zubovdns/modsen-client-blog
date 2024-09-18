@@ -3,6 +3,7 @@ import { HomeAboutUsBanner } from "@components/home-about-us-banner/home-about-u
 import { HomeBanner } from "@components/home-banner/home-banner";
 import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
 import { PostsBanner } from "@components/posts-banner/posts-banner";
+import { TestimonialsBanner } from "@components/testimonials-banner/testimonials-banner";
 
 import styles from "./page.module.scss";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <PostsBanner />
       <HomeAboutUsBanner />
       <FeaturedInBanner />
+      <TestimonialsBanner />
       <JoinOurTeamBanner />
     </div>
   );
