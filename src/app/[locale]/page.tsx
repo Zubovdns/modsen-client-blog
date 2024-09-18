@@ -3,6 +3,7 @@ import { FeaturedInBanner } from "@components/featured-in-banner/featured-in-ban
 import { HomeAboutUsBanner } from "@components/home-about-us-banner/home-about-us-banner";
 import { HomeBanner } from "@components/home-banner/home-banner";
 import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
+import { ListOfAuthors } from "@components/list-of-authors/list-of-authors";
 import { PostsBanner } from "@components/posts-banner/posts-banner";
 import { WhyWeStartedBanner } from "@components/why-we-started-banner/why-we-started-banner";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <HomeAboutUsBanner />
       <CategorySelector />
       <WhyWeStartedBanner />
+      <ListOfAuthors />
       <FeaturedInBanner />
       <JoinOurTeamBanner />
     </div>

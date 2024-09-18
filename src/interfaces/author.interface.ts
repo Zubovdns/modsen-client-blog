@@ -4,7 +4,10 @@ export interface Author {
   id: string;
 
   name: string;
-  avatar: string | StaticImport;
+  avatar: {
+    src: string | StaticImport;
+    alt: string;
+  };
 
   facebook: string | null;
   instagram: string | null;
