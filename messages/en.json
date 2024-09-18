@@ -186,5 +186,9 @@
         "alt": "Technology icon"
       }
     }
+  },
+
+  "ListOfAuthors": {
+    "title": "List of Authors"
   }
 }
