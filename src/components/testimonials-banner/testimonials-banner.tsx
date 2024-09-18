@@ -22,31 +22,30 @@ export const TestimonialsBanner = () => {
       </div>
       <div className={styles.carousel}>
         <div className={styles.slides} data-index={currentIndex}>
-          {Object.keys(testimonials).map((key) => {
-            const { avatar } = testimonials[key];
-            return (
-              <div key={key} className={styles.slide}>
-                <p className={typography.Heading4}>{t(`${key}.text`)}</p>
+          {Object.entries(testimonials).map(([testimonial, { avatar }]) => (
+            <div key={testimonial} className={styles.slide}>
+              <p className={typography.Heading4}>{t(`${testimonial}.text`)}</p>
 
-                <div className={styles.userInfo}>
-                  <div className={styles.avatarWrapper}>
-                    <Image
-                      src={avatar}
-                      alt={t(`${key}.avatar.alt`)}
-                      className={styles.avatar}
-                      fill
-                    />
-                  </div>
-                  <div>
-                    <h3 className={typography.Heading4}>{t(`${key}.name`)}</h3>
-                    <p className={`${typography.body1} ${styles.location}`}>
-                      {t(`${key}.location`)}
-                    </p>
-                  </div>
+              <div className={styles.userInfo}>
+                <div className={styles.avatarWrapper}>
+                  <Image
+                    src={avatar}
+                    alt={t(`${testimonial}.avatar.alt`)}
+                    className={styles.avatar}
+                    fill
+                  />
+                </div>
+                <div>
+                  <h3 className={typography.Heading4}>
+                    {t(`${testimonial}.name`)}
+                  </h3>
+                  <p className={`${typography.body1} ${styles.location}`}>
+                    {t(`${testimonial}.location`)}
+                  </p>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
 
         <div className={styles.controls}>
