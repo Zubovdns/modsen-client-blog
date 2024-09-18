@@ -1,1 +1,78 @@
-export const ListOfAuthors = () => <div></div>;
+import Image from "next/image";
+
+import { list_of_authors } from "@/mocks/authors-mock";
+import { IconLink } from "@components/icon-link/icon-link";
+import FacebookIcon from "@public/icons/social-networks/facebook-icon.svg";
+import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
+import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";
+import TwitterIcon from "@public/icons/social-networks/twitter-icon.svg";
+import typography from "@styles/typography.module.scss";
+
+import styles from "./list-of-authors.module.scss";
+
+export const ListOfAuthors = () => (
+  <div className={styles.container}>
+    <h2 className={typography.Heading2}>List of Authors</h2>
+    <div className={styles.list}>
+      {list_of_authors.map(
+        ({
+          avatar,
+          id,
+          name,
+          description,
+          facebook,
+          instagram,
+          linkedin,
+          twitter,
+        }) => (
+          <div key={id} className={styles.card}>
+            <div className={styles.avatarWrapper}>
+              <Image
+                src={avatar.src}
+                alt={avatar.alt}
+                className={styles.avatar}
+                fill
+              />
+            </div>
+            <div className={styles.text}>
+              <h3 className={typography.Heading3}>{name}</h3>
+              <p className={`${typography.body2} ${styles.description}`}>
+                {description}
+              </p>
+            </div>
+            <div className={styles.socials}>
+              {facebook && (
+                <IconLink
+                  icon={FacebookIcon}
+                  alt={`${name}'s facebook icon`}
+                  href={facebook}
+                />
+              )}
+              {twitter && (
+                <IconLink
+                  icon={TwitterIcon}
+                  alt={`${name}'s twitter icon`}
+                  href={twitter}
+                />
+              )}
+              {instagram && (
+                <IconLink
+                  icon={InstagramIcon}
+                  alt={`${name}'s instagram icon`}
+                  href={instagram}
+                />
+              )}
+              {linkedin && (
+                <IconLink
+                  icon={LinkedInIcon}
+                  alt={`${name}'s linked in icon`}
+                  href={linkedin}
+                />
+              )}
+            </div>
+          </div>
+        ),
+      )}
+    </div>
+  </div>
+);

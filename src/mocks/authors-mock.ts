@@ -4,7 +4,10 @@ export const authors_mock: Author[] = [
   {
     id: "1",
     name: "James West",
-    avatar: "https://i.pravatar.cc/1000?u=asdasddasdxda",
+    avatar: {
+      src: "https://i.pravatar.cc/1000?u=asdasddasdxda",
+      alt: "ames West's avatar",
+    },
     description: "Content Writer @Company",
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
@@ -14,7 +17,10 @@ export const authors_mock: Author[] = [
   {
     id: "2",
     name: "Dianne Russell",
-    avatar: "https://i.pravatar.cc/1000?u=asdasndkjbnaskjdnaskjdbkasnd",
+    avatar: {
+      src: "https://i.pravatar.cc/1000?u=asdasndkjbnaskjdnaskjdbkasnd",
+      alt: "Dianne Russell's avatar",
+    },
     description: "Content Writer @Company",
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
@@ -24,7 +30,10 @@ export const authors_mock: Author[] = [
   {
     id: "3",
     name: "Floyd Miles",
-    avatar: "https://i.pravatar.cc/1000?u=asdasdasddasdxda",
+    avatar: {
+      src: "https://i.pravatar.cc/1000?u=asdasdasddasdxda",
+      alt: "Floyd Miles's avatar",
+    },
     description: "Content Writer @Company",
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
@@ -34,7 +43,10 @@ export const authors_mock: Author[] = [
   {
     id: "4",
     name: "Jenny Wilson",
-    avatar: "https://i.pravatar.cc/1000?u=asdhaskjdkas",
+    avatar: {
+      src: "https://i.pravatar.cc/1000?u=asdhaskjdkas",
+      alt: "Jenny Wilson's avatar",
+    },
     description: "Content Writer @Company",
     facebook: "https://www.facebook.com",
     instagram: "https://www.instagram.com/",
@@ -42,3 +54,5 @@ export const authors_mock: Author[] = [
     linkedin: "https://lt.linkedin.com/",
   },
 ];
+
+export const list_of_authors = authors_mock.slice(0, 4);
