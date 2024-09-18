@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { featured_post, posts_mock } from "@/mocks/posts-mock";
 import { Button } from "@components/button/button";
@@ -9,9 +9,9 @@ import { formattedDate } from "@utils/formatDate";
 
 import styles from "./posts-banner.module.scss";
 
-export const PostsBanner = () => {
-  const t = useTranslations("PostsBanner");
-  const locale = useLocale();
+export const PostsBanner = async () => {
+  const t = await getTranslations("PostsBanner");
+  const locale = await getLocale();
 
   // ! добавить api
   const posts = posts_mock.slice(0, 4);

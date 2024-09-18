@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
 import { last_post } from "@/mocks/posts-mock";
 import { formattedDate } from "@/utils/formatDate";
@@ -9,9 +9,9 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./home-banner.module.scss";
 
-export const HomeBanner = () => {
-  const t = useTranslations("FeaturePost");
-  const locale = useLocale();
+export const HomeBanner = async () => {
+  const t = await getTranslations("FeaturePost");
+  const locale = await getLocale();
 
   return (
     <div className={styles.container}>

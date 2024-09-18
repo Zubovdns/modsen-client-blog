@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "@components/button/button";
 import BannerImage from "@public/images/why-we-started-image.png";
@@ -7,8 +7,8 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./why-we-started-banner.module.scss";
 
-export const WhyWeStartedBanner = () => {
-  const t = useTranslations("WhyWeStartedBanner");
+export const WhyWeStartedBanner = async () => {
+  const t = await getTranslations("WhyWeStartedBanner");
 
   return (
     <div className={styles.container}>
