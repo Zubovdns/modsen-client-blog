@@ -1,12 +1,12 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { Button } from "@components/button/button";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./join-our-team-banner.module.scss";
 
-export const JoinOurTeamBanner = () => {
-  const t = useTranslations("JoinOurTeam");
+export const JoinOurTeamBanner = async () => {
+  const t = await getTranslations("JoinOurTeam");
 
   return (
     <div className={styles.banner}>

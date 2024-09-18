@@ -1,13 +1,13 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import { categories } from "@/constants/categories.constant";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./category-selector.module.scss";
 
-export const CategorySelector = () => {
-  const t = useTranslations("CategorySelector");
+export const CategorySelector = async () => {
+  const t = await getTranslations("CategorySelector");
 
   return (
     <div className={styles.container}>

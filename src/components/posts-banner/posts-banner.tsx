@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useLocale, useTranslations } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 
-import { featured_post, posts_mock } from "@/mocks/posts-mock";
+import { getFeaturedPost } from "@/service/posts/get-featured-post";
+import { getLastFourPosts } from "@/service/posts/get-last-four-posts";
 import { Button } from "@components/button/button";
 import { NavLink } from "@components/nav-link/nav-link";
 import typography from "@styles/typography.module.scss";
@@ -9,12 +10,12 @@ import { formattedDate } from "@utils/formatDate";
 
 import styles from "./posts-banner.module.scss";
 
-export const PostsBanner = () => {
-  const t = useTranslations("PostsBanner");
-  const locale = useLocale();
+export const PostsBanner = async () => {
+  const t = await getTranslations("PostsBanner");
+  const locale = await getLocale();
 
-  // ! добавить api
-  const posts = posts_mock.slice(0, 4);
+  const posts = await getLastFourPosts();
+  const featuredPost = await getFeaturedPost();
 
   return (
     <div className={styles.container}>
@@ -27,7 +28,7 @@ export const PostsBanner = () => {
             <Image
               className={styles.image}
               alt={t("feature-post.image.alt")}
-              src={featured_post.title_image}
+              src={featuredPost.title_image}
               fill
             />
           </div>
@@ -36,16 +37,16 @@ export const PostsBanner = () => {
               {t("by")}
               <NavLink
                 className={styles.author}
-                href={`/author/${featured_post.author.id}`}
+                href={`/author/${featuredPost.author.id}`}
               >
-                {featured_post.author.name}
+                {featuredPost.author.name}
               </NavLink>
               {t("separator")}
-              <span>{formattedDate(featured_post.publish_date, locale)}</span>
+              <span>{formattedDate(featuredPost.publish_date, locale)}</span>
             </p>
-            <h4 className={typography.Heading3}>{featured_post.title}</h4>
+            <h4 className={typography.Heading3}>{featuredPost.title}</h4>
             <p className={`${typography.body1} ${styles.description}`}>
-              {featured_post.description}
+              {featuredPost.description}
             </p>
           </div>
           <Button>{t("feature-post.button.title")}</Button>

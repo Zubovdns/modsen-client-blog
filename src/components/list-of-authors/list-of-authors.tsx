@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-import { list_of_authors } from "@/mocks/authors-mock";
+import { getFirstFourAuthors } from "@/service/authors/get-first-four-authors";
 import { IconLink } from "@components/icon-link/icon-link";
 import FacebookIcon from "@public/icons/social-networks/facebook-icon.svg";
 import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
@@ -11,14 +11,16 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./list-of-authors.module.scss";
 
-export const ListOfAuthors = () => {
-  const t = useTranslations("ListOfAuthors");
+export const ListOfAuthors = async () => {
+  const t = await getTranslations("ListOfAuthors");
+
+  const authors = await getFirstFourAuthors();
 
   return (
     <div className={styles.container}>
       <h2 className={typography.Heading2}>{t("title")}</h2>
       <div className={styles.list}>
-        {list_of_authors.map(
+        {authors.map(
           ({
             avatar,
             id,
@@ -45,28 +47,28 @@ export const ListOfAuthors = () => {
                 </p>
               </div>
               <div className={styles.socials}>
-                {facebook && (
+                {!!facebook && (
                   <IconLink
                     icon={FacebookIcon}
                     alt={`${name}'s facebook icon`}
                     href={facebook}
                   />
                 )}
-                {twitter && (
+                {!!twitter && (
                   <IconLink
                     icon={TwitterIcon}
                     alt={`${name}'s twitter icon`}
                     href={twitter}
                   />
                 )}
-                {instagram && (
+                {!!instagram && (
                   <IconLink
                     icon={InstagramIcon}
                     alt={`${name}'s instagram icon`}
                     href={instagram}
                   />
                 )}
-                {linkedin && (
+                {!!linkedin && (
                   <IconLink
                     icon={LinkedInIcon}
                     alt={`${name}'s linked in icon`}

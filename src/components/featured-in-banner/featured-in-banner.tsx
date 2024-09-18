@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
 import Logo1 from "@public/icons/partners/logo-1.svg";
 import Logo2 from "@public/icons/partners/logo-2.svg";
@@ -10,8 +10,8 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./featured-in-banner.module.scss";
 
-export const FeaturedInBanner = () => {
-  const t = useTranslations("FeaturedIn");
+export const FeaturedInBanner = async () => {
+  const t = await getTranslations("FeaturedIn");
 
   return (
     <div className={styles.container}>
