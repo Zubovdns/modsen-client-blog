@@ -144,6 +144,54 @@
     }
   },
 
+  "WhyWeStartedBanner": {
+    "header": "Why We Started",
+    "title": "It started out as a simple idea and evolved into our passion",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "button": {
+      "title": "Discover out story >"
+    },
+    "image": {
+      "alt": "Why we started image"
+    }
+  },
+
+  "CategorySelector": {
+    "title": "Choose A Category",
+    "startup": {
+      "title": "Startup",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Startup icon"
+      }
+    },
+    "business": {
+      "title": "Business",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Business icon"
+      }
+    },
+    "economy": {
+      "title": "Economy",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Economy icon"
+      }
+    },
+    "technology": {
+      "title": "Technology",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "icon": {
+        "alt": "Technology icon"
+      }
+    }
+  },
+
+  "ListOfAuthors": {
+    "title": "List of Authors"
+  },
+
   "Testimonials": {
     "header": "testimonials",
     "title": "What people say about our blog",

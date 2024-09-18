@@ -141,6 +141,54 @@
     }
   },
 
+  "WhyWeStartedBanner": {
+    "header": "Почему мы начали",
+    "title": "Это начиналось как простая идея и превратилось в нашу страсть",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "button": {
+      "title": "Узнай нашу историю >"
+    },
+    "image": {
+      "alt": "Изображение почему мы начали"
+    }
+  },
+
+  "CategorySelector": {
+    "title": "Выберите категорию",
+    "startup": {
+      "title": "Стартап",
+      "description": "Описание для стартапов на русском.",
+      "icon": {
+        "alt": "Иконка категории 'Стартап'"
+      }
+    },
+    "business": {
+      "title": "Бизнес",
+      "description": "Описание для бизнеса на русском.",
+      "icon": {
+        "alt": "Иконка категории 'Бизнес'"
+      }
+    },
+    "economy": {
+      "title": "Экономика",
+      "description": "Описание для экономики на русском.",
+      "icon": {
+        "alt": "Иконка категории 'Экономика'"
+      }
+    },
+    "technology": {
+      "title": "Технологии",
+      "description": "Описание для технологий на русском.",
+      "icon": {
+        "alt": "Иконка категории 'Технологии'"
+      }
+    }
+  },
+
+  "ListOfAuthors": {
+    "title": "Список авторов"
+  },
+
   "Testimonials": {
     "header": "отзывы",
     "title": "Что люди говорят о нашем блоге",
