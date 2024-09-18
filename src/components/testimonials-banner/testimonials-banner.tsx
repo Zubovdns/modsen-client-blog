@@ -9,6 +9,9 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./testimonials-banner.module.scss";
 
+const NEXT_SYMBOL = String.fromCharCode(8594);
+const PREV_SYMBOL = String.fromCharCode(8592);
+
 export const TestimonialsBanner = () => {
   const { currentIndex, nextSlide, prevSlide } = useSlider(testimonials);
   const t = useTranslations("Testimonials");
@@ -53,13 +56,13 @@ export const TestimonialsBanner = () => {
             className={`${styles.controlBtn} ${styles.prevBtn}`}
             onClick={prevSlide}
           >
-            &#8592;
+            {PREV_SYMBOL}
           </button>
           <button
             className={`${styles.nextBtn} ${styles.controlBtn}`}
             onClick={nextSlide}
           >
-            &#8594;
+            {NEXT_SYMBOL}
           </button>
         </div>
       </div>
