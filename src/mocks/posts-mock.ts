@@ -1,12 +1,12 @@
 import { Blog } from "@interfaces/blog.interface";
 
-import { author_mock } from "./authors-mock";
+import { authors_mock } from "./authors-mock";
 
 export const posts_mock: Blog[] = [
   {
     id: "1",
     category: "startup",
-    author: author_mock,
+    author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
     title_image:
@@ -19,7 +19,7 @@ export const posts_mock: Blog[] = [
   {
     id: "2",
     category: "startup",
-    author: author_mock,
+    author: authors_mock[1],
     publish_date: new Date("2023-04-21"),
     title:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
@@ -33,7 +33,7 @@ export const posts_mock: Blog[] = [
   {
     id: "3",
     category: "startup",
-    author: author_mock,
+    author: authors_mock[2],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
     title_image:
@@ -46,7 +46,7 @@ export const posts_mock: Blog[] = [
   {
     id: "4",
     category: "startup",
-    author: author_mock,
+    author: authors_mock[3],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
     title_image:
