@@ -5,6 +5,7 @@ import { HomeBanner } from "@components/home-banner/home-banner";
 import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
 import { ListOfAuthors } from "@components/list-of-authors/list-of-authors";
 import { PostsBanner } from "@components/posts-banner/posts-banner";
+import { TestimonialsBanner } from "@components/testimonials-banner/testimonials-banner";
 import { WhyWeStartedBanner } from "@components/why-we-started-banner/why-we-started-banner";
 
 import styles from "./page.module.scss";
@@ -19,6 +20,7 @@ export default function Home() {
       <WhyWeStartedBanner />
       <ListOfAuthors />
       <FeaturedInBanner />
+      <TestimonialsBanner />
       <JoinOurTeamBanner />
     </div>
   );

@@ -190,5 +190,35 @@
 
   "ListOfAuthors": {
     "title": "List of Authors"
+  },
+
+  "Testimonials": {
+    "header": "testimonials",
+    "title": "What people say about our blog",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "testimonial-1": {
+      "text": "The content on this blog is insightful and always well-researched. It's my go-to for staying informed!",
+      "name": "Sarah Thompson",
+      "location": "London, UK",
+      "avatar": {
+        "alt": "Sarah Thompson's avatar"
+      }
+    },
+    "testimonial-2": {
+      "text": "I love how practical and easy-to-follow the articles are. They've helped me improve my daily routine significantly.",
+      "name": "Carlos Mendoza",
+      "location": "Madrid, Spain",
+      "avatar": {
+        "alt": "Carlos Mendoza's avatar"
+      }
+    },
+    "testimonial-3": {
+      "text": "A wonderful mix of creativity and useful information. I always leave with new ideas and inspiration.",
+      "name": "Emily Nguyen",
+      "location": "Sydney, Australia",
+      "avatar": {
+        "alt": "Emily Nguyen's avatar"
+      }
+    }
   }
 }
