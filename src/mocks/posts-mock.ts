@@ -5,7 +5,7 @@ import { author_mock } from "./authors-mock";
 export const posts_mock: Blog[] = [
   {
     id: "1",
-    category: "Startup",
+    category: "startup",
     author: author_mock,
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -18,7 +18,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "2",
-    category: "Startup",
+    category: "startup",
     author: author_mock,
     publish_date: new Date("2023-04-21"),
     title:
@@ -32,7 +32,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "3",
-    category: "Startup",
+    category: "startup",
     author: author_mock,
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -45,7 +45,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "4",
-    category: "Startup",
+    category: "startup",
     author: author_mock,
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",

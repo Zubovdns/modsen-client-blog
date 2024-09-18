@@ -1,6 +1,6 @@
 import { Author } from "@interfaces/author.interface";
 
-export type category = "Startup" | "Business" | "Economy" | "Technology";
+export type category = "startup" | "business" | "economy" | "technology";
 
 export interface Blog {
   id: string;
