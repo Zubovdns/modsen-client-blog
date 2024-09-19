@@ -1,8 +1,11 @@
 import { Blog } from "@interfaces/blog.interface";
+import { getBaseUrl } from "@utils/get-base-url";
 
 export const getLastFourPosts = async (): Promise<Blog[]> => {
+  const baseUrl = getBaseUrl();
+
   try {
-    const response = await fetch("http://localhost:3000/api/posts/?limit=4");
+    const response = await fetch(`${baseUrl}/api/posts/?limit=4`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch posts");
