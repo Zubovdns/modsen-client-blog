@@ -28,8 +28,8 @@ export const Footer = () => {
 
   const handleSubmit = async () => {
     try {
+      setEmail("");
       await emailSchema.validate({ email });
-
       sendEmail(email);
     } catch (validationError) {
       if (validationError instanceof Yup.ValidationError) {
