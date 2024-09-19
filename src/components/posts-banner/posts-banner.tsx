@@ -14,7 +14,7 @@ export const PostsBanner = async () => {
   const t = await getTranslations("PostsBanner");
   const locale = await getLocale();
 
-  const posts = await getLastFourPosts();
+  const data = await getLastFourPosts();
   const featuredPost = await getFeaturedPost();
 
   return (
@@ -63,7 +63,7 @@ export const PostsBanner = async () => {
           </NavLink>
         </div>
         <div className={styles.allPosts}>
-          {posts.map(({ id, publish_date, author, title }) => (
+          {data.posts.map(({ id, publish_date, author, title }) => (
             <div key={id} className={styles.allItem}>
               <p className={`${typography.label} ${styles.metaInfo}`}>
                 {t("by")}
