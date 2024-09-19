@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import * as Yup from "yup";
 
+import { emailSchema } from "@/schemes/email.schema";
 import { Button } from "@components/button/button";
 import { FormInput } from "@components/form-input/form-input";
 import { IconLink } from "@components/icon-link/icon-link";
@@ -12,16 +14,28 @@ import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
 import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";
 import TwitterIcon from "@public/icons/social-networks/twitter-icon.svg";
 import typography from "@styles/typography.module.scss";
+import { sendEmail } from "@utils/sendEmail";
 
 import styles from "./footer.module.scss";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
-
   const t = useTranslations("Footer");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      setEmail("");
+      await emailSchema.validate({ email });
+      sendEmail(email);
+    } catch (validationError) {
+      if (validationError instanceof Yup.ValidationError) {
+        console.error(validationError.message);
+      }
+    }
   };
 
   return (
@@ -51,7 +65,7 @@ export const Footer = () => {
             type="email"
             placeholder={t("input-placeholder")}
           />
-          <Button>{t("button")}</Button>
+          <Button onClick={handleSubmit}>{t("button")}</Button>
         </div>
       </div>
       <div className={styles.bottomContainer}>
