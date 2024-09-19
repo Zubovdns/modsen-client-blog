@@ -1,12 +1,14 @@
 import { Blog } from "@interfaces/blog.interface";
 import { getBaseUrl } from "@utils/get-base-url";
 
-type ReceivedData = {
+export type PostsReceivedData = {
   posts: Blog[];
   hasMore: boolean;
 };
 
-export const getPostsByPage = async (page: number): Promise<ReceivedData> => {
+export const getPostsByPage = async (
+  page: number,
+): Promise<PostsReceivedData> => {
   const baseUrl = getBaseUrl();
 
   try {
@@ -16,7 +18,7 @@ export const getPostsByPage = async (page: number): Promise<ReceivedData> => {
       throw new Error("Failed to fetch posts");
     }
 
-    const posts: ReceivedData = await response.json();
+    const posts: PostsReceivedData = await response.json();
     return posts;
   } catch (error) {
     throw new Error("HandledError: " + error);

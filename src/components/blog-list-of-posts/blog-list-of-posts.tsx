@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { getPostsByPage } from "@/service/posts/get-posts-by-page";
+import {
+  getPostsByPage,
+  PostsReceivedData,
+} from "@/service/posts/get-posts-by-page";
 import { Loader } from "@components/loader/loader";
-import { Blog } from "@interfaces/blog.interface";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./blog-list-of-posts.module.scss";
@@ -17,10 +19,7 @@ export const BlogListOfPosts = () => {
   const t = useTranslations("PostsBanner");
 
   const [page, setPage] = useState(START_PAGE);
-  const [data, setData] = useState<{
-    posts: Blog[];
-    hasMore: boolean;
-  }>({
+  const [data, setData] = useState<PostsReceivedData>({
     posts: [],
     hasMore: false,
   });
