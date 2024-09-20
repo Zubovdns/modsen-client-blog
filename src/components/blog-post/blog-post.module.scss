@@ -1,0 +1,69 @@
+@import "@styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 64px;
+
+  margin: 0 80px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 34px;
+
+  max-width: 800px;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 24px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 16px;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar {
+  object-fit: cover;
+}
+
+.authorName {
+  color: $purple;
+  opacity: 0.87;
+}
+
+.publishDate {
+  color: $medium-gray;
+}
