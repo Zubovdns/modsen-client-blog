@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 
 import { HomeBanner } from "@components/home-banner/home-banner";
+import { LazyLoad } from "@components/lazy-load/lazy-load";
 
 import styles from "./page.module.scss";
 
@@ -65,14 +66,38 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <HomeBanner />
-      <PostsBanner />
-      <HomeAboutUsBanner />
-      <CategorySelector />
-      <WhyWeStartedBanner />
-      <ListOfAuthors />
-      <FeaturedInBanner />
-      <TestimonialsBanner />
-      <JoinOurTeamBanner />
+
+      <LazyLoad>
+        <PostsBanner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <HomeAboutUsBanner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <CategorySelector />
+      </LazyLoad>
+
+      <LazyLoad>
+        <WhyWeStartedBanner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <ListOfAuthors />
+      </LazyLoad>
+
+      <LazyLoad>
+        <FeaturedInBanner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <TestimonialsBanner />
+      </LazyLoad>
+
+      <LazyLoad>
+        <JoinOurTeamBanner />
+      </LazyLoad>
     </div>
   );
 }
