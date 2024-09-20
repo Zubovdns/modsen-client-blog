@@ -21,8 +21,7 @@ export const posts_mock: Blog[] = [
     category: "startup",
     author: authors_mock[1],
     publish_date: new Date("2023-04-21"),
-    title:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    title: "Step-by-step guide to choosing great font pairs",
     title_image:
       "https://fastly.picsum.photos/id/176/2000/1500.jpg?hmac=SjB0gQR3Khn2q56U-rwKyWynt_VdUq6kzv_FlJBtRwc",
     description:
