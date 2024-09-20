@@ -29,7 +29,7 @@ export const WhyWeStartedBanner = async () => {
             {t("description")}
           </p>
         </div>
-        <Button>{t("button.title")}</Button>
+        <Button href="/about-us">{t("button.title")}</Button>
       </div>
     </div>
   );
