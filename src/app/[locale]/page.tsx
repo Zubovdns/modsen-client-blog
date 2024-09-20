@@ -4,45 +4,61 @@ import { HomeBanner } from "@components/home-banner/home-banner";
 
 import styles from "./page.module.scss";
 
-const PostsBanner = dynamic(() =>
-  import("@components/posts-banner/posts-banner").then(
-    (module) => module.PostsBanner,
-  ),
+const PostsBanner = dynamic(
+  () =>
+    import("@components/posts-banner/posts-banner").then(
+      (module) => module.PostsBanner,
+    ),
+  { ssr: false },
 );
-const HomeAboutUsBanner = dynamic(() =>
-  import("@components/home-about-us-banner/home-about-us-banner").then(
-    (module) => module.HomeAboutUsBanner,
-  ),
+const HomeAboutUsBanner = dynamic(
+  () =>
+    import("@components/home-about-us-banner/home-about-us-banner").then(
+      (module) => module.HomeAboutUsBanner,
+    ),
+  { ssr: false },
 );
-const CategorySelector = dynamic(() =>
-  import("@components/category-selector/category-selector").then(
-    (module) => module.CategorySelector,
-  ),
+const CategorySelector = dynamic(
+  () =>
+    import("@components/category-selector/category-selector").then(
+      (module) => module.CategorySelector,
+    ),
+  { ssr: false },
 );
-const WhyWeStartedBanner = dynamic(() =>
-  import("@components/why-we-started-banner/why-we-started-banner").then(
-    (module) => module.WhyWeStartedBanner,
-  ),
+const WhyWeStartedBanner = dynamic(
+  () =>
+    import("@components/why-we-started-banner/why-we-started-banner").then(
+      (module) => module.WhyWeStartedBanner,
+    ),
+  { ssr: false },
 );
-const ListOfAuthors = dynamic(() =>
-  import("@components/list-of-authors/list-of-authors").then(
-    (module) => module.ListOfAuthors,
-  ),
+const ListOfAuthors = dynamic(
+  () =>
+    import("@components/list-of-authors/list-of-authors").then(
+      (module) => module.ListOfAuthors,
+    ),
+  { ssr: false },
 );
-const FeaturedInBanner = dynamic(() =>
-  import("@components/featured-in-banner/featured-in-banner").then(
-    (module) => module.FeaturedInBanner,
-  ),
+const FeaturedInBanner = dynamic(
+  () =>
+    import("@components/featured-in-banner/featured-in-banner").then(
+      (module) => module.FeaturedInBanner,
+    ),
+  { ssr: false },
 );
-const TestimonialsBanner = dynamic(() =>
-  import("@components/testimonials-banner/testimonials-banner").then(
-    (module) => module.TestimonialsBanner,
-  ),
+const TestimonialsBanner = dynamic(
+  () =>
+    import("@components/testimonials-banner/testimonials-banner").then(
+      (module) => module.TestimonialsBanner,
+    ),
+  { ssr: false },
 );
-const JoinOurTeamBanner = dynamic(() =>
-  import("@components/join-our-team-banner/join-our-team-banner").then(
-    (module) => module.JoinOurTeamBanner,
-  ),
+const JoinOurTeamBanner = dynamic(
+  () =>
+    import("@components/join-our-team-banner/join-our-team-banner").then(
+      (module) => module.JoinOurTeamBanner,
+    ),
+  { ssr: false },
 );
 
 export default function Home() {

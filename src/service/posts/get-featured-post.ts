@@ -1,8 +1,11 @@
 import { Blog } from "@interfaces/blog.interface";
+import { getBaseUrl } from "@utils/get-base-url";
 
 export const getFeaturedPost = async (): Promise<Blog> => {
+  const baseUrl = getBaseUrl();
+
   try {
-    const response = await fetch("http://localhost:3000/api/posts/featured");
+    const response = await fetch(`${baseUrl}/api/posts/featured`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch the featured post");
