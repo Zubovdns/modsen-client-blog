@@ -3,6 +3,7 @@ import { getLocale } from "next-intl/server";
 import classNames from "classnames";
 
 import { categories } from "@/constants/categories.constant";
+import { blockType } from "@/constants/text-block.constant";
 import { getPostById } from "@/service/posts/get-post-by-id";
 import { NavLink } from "@components/nav-link/nav-link";
 import typography from "@styles/typography.module.scss";
@@ -10,6 +11,7 @@ import { formattedDate } from "@utils/formatDate";
 
 import styles from "./blog-post.module.scss";
 import { BlogPostProps } from "./blog-post.types";
+
 export const BlogPost = async ({ id }: BlogPostProps) => {
   const post = await getPostById(id);
   const locale = await getLocale();
@@ -63,14 +65,14 @@ export const BlogPost = async ({ id }: BlogPostProps) => {
       </div>
       <div className={styles.content}>
         {post.content.map((block, index) => {
-          if (block.type === "heading") {
+          if (block.type === blockType.HEADING) {
             return (
               <h2 key={index} className={typography.Heading2}>
                 {block.text}
               </h2>
             );
           }
-          if (block.type === "paragraph") {
+          if (block.type === blockType.PARAGRAPH) {
             return (
               <p key={index} className={typography.body1}>
                 {block.text}
