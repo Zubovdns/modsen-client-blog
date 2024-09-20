@@ -12,7 +12,9 @@ export const JoinOurTeamBanner = async () => {
     <div className={styles.banner}>
       <h4 className={`${typography.Heading2} ${styles.title}`}>{t("title")}</h4>
       <p className={`${typography.body1} ${styles.text}`}>{t("text")}</p>
-      <Button className={styles.button}>{t("button")}</Button>
+      <Button className={styles.button} href={"/contact-us"}>
+        {t("button")}
+      </Button>
     </div>
   );
 };

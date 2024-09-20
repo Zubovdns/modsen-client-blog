@@ -36,7 +36,9 @@ export const BlogFeaturedBanner = async () => {
         <p className={`${typography.body1} ${styles.description}`}>
           {post.description}
         </p>
-        <Button className={styles.button}>{t("button")}</Button>
+        <Button className={styles.button} href={`/blog/${post.id}`}>
+          {t("button")}
+        </Button>
       </div>
       <div className={styles.imageWrapper}>
         <Image
