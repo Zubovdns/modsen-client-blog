@@ -5,16 +5,20 @@ import { BlogListOfPosts } from "@components/blog-list-of-posts/blog-list-of-pos
 
 import styles from "../page.module.scss";
 
-const CategorySelector = dynamic(() =>
-  import("@components/category-selector/category-selector").then(
-    (module) => module.CategorySelector,
-  ),
+const JoinOurTeamBanner = dynamic(
+  () =>
+    import("@components/join-our-team-banner/join-our-team-banner").then(
+      (module) => module.JoinOurTeamBanner,
+    ),
+  { ssr: false },
 );
 
-const JoinOurTeamBanner = dynamic(() =>
-  import("@components/join-our-team-banner/join-our-team-banner").then(
-    (module) => module.JoinOurTeamBanner,
-  ),
+const CategorySelector = dynamic(
+  () =>
+    import("@components/category-selector/category-selector").then(
+      (module) => module.CategorySelector,
+    ),
+  { ssr: false },
 );
 
 export default function Blog() {
