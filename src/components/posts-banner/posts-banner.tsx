@@ -5,6 +5,7 @@ import { getFeaturedPost } from "@/service/posts/get-featured-post";
 import { getLastFourPosts } from "@/service/posts/get-last-four-posts";
 import { Button } from "@components/button/button";
 import { NavLink } from "@components/nav-link/nav-link";
+import { Link } from "@i18n/routing";
 import typography from "@styles/typography.module.scss";
 import { formattedDate } from "@utils/formatDate";
 
@@ -49,7 +50,9 @@ export const PostsBanner = async () => {
               {featuredPost.description}
             </p>
           </div>
-          <Button>{t("feature-post.button.title")}</Button>
+          <Button href={`/blog/${featuredPost.id}`}>
+            {t("feature-post.button.title")}
+          </Button>
         </div>
       </div>
       <div className={styles.allContainer}>
@@ -64,7 +67,7 @@ export const PostsBanner = async () => {
         </div>
         <div className={styles.allPosts}>
           {data.posts.map(({ id, publish_date, author, title }) => (
-            <div key={id} className={styles.allItem}>
+            <Link key={id} className={styles.allItem} href={`/blog/${id}`}>
               <p className={`${typography.label} ${styles.metaInfo}`}>
                 {t("by")}
                 <NavLink
@@ -77,7 +80,7 @@ export const PostsBanner = async () => {
                 <span>{formattedDate(publish_date, locale)}</span>
               </p>
               <h5 className={typography.Heading4}>{title}</h5>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
