@@ -3,6 +3,7 @@ import { getTranslations } from "next-intl/server";
 
 import { getFirstFourAuthors } from "@/service/authors/get-first-four-authors";
 import { IconLink } from "@components/icon-link/icon-link";
+import { Link } from "@i18n/routing";
 import FacebookIcon from "@public/icons/social-networks/facebook-icon.svg";
 import InstagramIcon from "@public/icons/social-networks/instagram-icon.svg";
 import LinkedInIcon from "@public/icons/social-networks/linked-in-icon.svg";
@@ -31,7 +32,7 @@ export const ListOfAuthors = async () => {
             linkedin,
             twitter,
           }) => (
-            <div key={id} className={styles.card}>
+            <Link key={id} className={styles.card} href={`/author/${id}`}>
               <div className={styles.avatarWrapper}>
                 <Image
                   src={avatar.src}
@@ -76,7 +77,7 @@ export const ListOfAuthors = async () => {
                   />
                 )}
               </div>
-            </div>
+            </Link>
           ),
         )}
       </div>

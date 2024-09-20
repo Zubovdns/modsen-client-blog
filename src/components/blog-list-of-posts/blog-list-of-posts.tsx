@@ -9,6 +9,7 @@ import {
   PostsReceivedData,
 } from "@/service/posts/get-posts-by-page";
 import { Loader } from "@components/loader/loader";
+import { Link } from "@i18n/routing";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./blog-list-of-posts.module.scss";
@@ -60,7 +61,7 @@ export const BlogListOfPosts = () => {
         <div className={styles.list}>
           {data.posts.map(
             ({ category, title, description, title_image, id }) => (
-              <div key={id} className={styles.card}>
+              <Link key={id} className={styles.card} href={`/blog/${id}`}>
                 <div className={styles.imageWrapper}>
                   <Image
                     className={styles.image}
@@ -76,7 +77,7 @@ export const BlogListOfPosts = () => {
                     <p className={typography.body1}>{description}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ),
           )}
         </div>
