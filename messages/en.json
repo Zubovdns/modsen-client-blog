@@ -143,7 +143,9 @@
       }
     },
     "prev": "< Prev",
-    "next": "Next >"
+    "next": "Next >",
+
+    "related-posts-title": "What to read next"
   },
 
   "WhyWeStartedBanner": {
