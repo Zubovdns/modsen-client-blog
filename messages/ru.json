@@ -140,7 +140,9 @@
       }
     },
     "prev": "< Назад",
-    "next": "Далее >"
+    "next": "Далее >",
+
+    "related-posts-title": "Также читают"
   },
 
   "WhyWeStartedBanner": {
