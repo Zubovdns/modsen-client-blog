@@ -1,5 +1,7 @@
+import { RelatedPosts } from "@components/related-posts/related-posts";
+
 import { BlogPageProps } from "./types";
 
 export default function BlogPage({ params }: BlogPageProps) {
-  return <div>ID: {params.id}</div>;
+  return <RelatedPosts id={params.id} />;
 }
