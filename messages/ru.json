@@ -138,7 +138,9 @@
         "title": "Открыть блог",
         "href": "/blog"
       }
-    }
+    },
+    "prev": "< Назад",
+    "next": "Далее >"
   },
 
   "WhyWeStartedBanner": {

@@ -141,7 +141,9 @@
         "title": "View posts",
         "href": "/blog"
       }
-    }
+    },
+    "prev": "< Prev",
+    "next": "Next >"
   },
 
   "WhyWeStartedBanner": {
