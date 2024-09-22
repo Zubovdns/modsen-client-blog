@@ -224,5 +224,9 @@
         "alt": "Emily Nguyen's avatar"
       }
     }
+  },
+
+  "AuthorPosts": {
+    "title": "My posts"
   }
 }
