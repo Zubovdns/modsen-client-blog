@@ -227,6 +227,7 @@
   },
 
   "AuthorPosts": {
-    "title": "My posts"
+    "title": "My posts",
+    "placeholder": "There will be posts here as soon as the author publishes them."
   }
 }

@@ -14,7 +14,7 @@ export const ListOfAuthorPosts = async ({ id }: ListOfAuthorPostsProps) => {
 
   const posts = await getPostsByAuthorId(id);
 
-  return (
+  return posts.length !== 0 ? (
     <div className={styles.container}>
       <h1 className={classNames(typography.Heading1, styles.title)}>
         {t("title")}
@@ -42,6 +42,10 @@ export const ListOfAuthorPosts = async ({ id }: ListOfAuthorPostsProps) => {
           </Link>
         ))}
       </div>
+    </div>
+  ) : (
+    <div className={styles.placeholderContainer}>
+      <h1 className={typography.Heading2}>{t("placeholder")}</h1>
     </div>
   );
 };
