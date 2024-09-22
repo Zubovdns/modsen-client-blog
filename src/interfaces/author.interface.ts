@@ -15,4 +15,9 @@ export interface Author {
   linkedin: string | null;
 
   description: string;
+
+  page: {
+    title: string;
+    description: string;
+  };
 }

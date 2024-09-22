@@ -13,6 +13,11 @@ export const authors_mock: Author[] = [
     instagram: "https://www.instagram.com/",
     twitter: "https://x.com/",
     linkedin: "https://lt.linkedin.com/",
+    page: {
+      title: "Hey there, I’m James West and welcome to my Blog",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    },
   },
   {
     id: "2",
@@ -26,6 +31,11 @@ export const authors_mock: Author[] = [
     instagram: "https://www.instagram.com/",
     twitter: "https://x.com/",
     linkedin: "https://lt.linkedin.com/",
+    page: {
+      title: "Hey there, I’m Dianne Russell and welcome to my Blog",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    },
   },
   {
     id: "3",
@@ -39,6 +49,11 @@ export const authors_mock: Author[] = [
     instagram: "https://www.instagram.com/",
     twitter: "https://x.com/",
     linkedin: "https://lt.linkedin.com/",
+    page: {
+      title: "Hey there, I’m Floyd Miles and welcome to my Blog",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    },
   },
   {
     id: "4",
@@ -52,6 +67,11 @@ export const authors_mock: Author[] = [
     instagram: "https://www.instagram.com/",
     twitter: "https://x.com/",
     linkedin: "https://lt.linkedin.com/",
+    page: {
+      title: "Hey there, I’m Jenny Wilson and welcome to my Blog",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus.",
+    },
   },
 ];
 
