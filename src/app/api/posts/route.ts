@@ -5,11 +5,26 @@ import { posts_mock } from "@/mocks/posts-mock";
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
   const authorId = searchParams.get("authorId");
+  const category = searchParams.get("category")?.toLowerCase();
+  const tags = searchParams.get("tags")?.split(",");
   const limit = searchParams.get("limit");
   const page = searchParams.get("page");
 
   const parsedLimit = limit ? parseInt(limit, 10) : null;
   const parsedPage = page ? parseInt(page, 10) : null;
+
+  if (category) {
+    const posts = posts_mock.filter((post) => {
+      const isCategoryMatch = post.category === category;
+      const isTagsMatch =
+        !tags ||
+        tags.length === 0 ||
+        tags.some((tag) => post.tags.includes(tag));
+      return isCategoryMatch && isTagsMatch;
+    });
+
+    return NextResponse.json(posts);
+  }
 
   if (authorId) {
     const posts = posts_mock.filter((post) => post.author.id === authorId);
