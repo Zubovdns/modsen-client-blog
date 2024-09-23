@@ -16,4 +16,5 @@ export interface Blog {
   title_image: string;
   description: string;
   content: BlogContentBlock[];
+  tags: string[];
 }
