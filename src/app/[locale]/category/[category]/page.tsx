@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 
 import { CategoryBanner } from "@components/category-banner/category-banner";
-import { categories, Category } from "@interfaces/category.interface";
+import { CategorySearch } from "@components/category-search/category-search";
+import { isValidCategory } from "@utils/is-valid-category";
 
 import styles from "./page.module.scss";
 import { CategoryPageProps } from "./page.type";
@@ -9,13 +10,14 @@ import { CategoryPageProps } from "./page.type";
 export default function CategoryPage({ params }: CategoryPageProps) {
   const { category } = params;
 
-  if (!Object.values(categories).includes(category as Category)) {
+  if (!isValidCategory(category)) {
     notFound();
   }
 
   return (
     <div className={styles.page}>
-      <CategoryBanner category={category as Category} />
+      <CategoryBanner category={category} />
+      <CategorySearch category={category} />
     </div>
   );
 }
