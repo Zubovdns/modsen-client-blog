@@ -1,8 +1,11 @@
 import { Blog } from "@interfaces/blog.interface";
+import { getBaseUrl } from "@utils/get-base-url";
 
 export const getPostById = async (id: string) => {
+  const baseUrl = getBaseUrl();
+
   try {
-    const response = await fetch(`http://localhost:3000/api/posts/${id}`);
+    const response = await fetch(`${baseUrl}/api/posts/${id}`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch posts");

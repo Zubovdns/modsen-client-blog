@@ -1,0 +1,62 @@
+@import "@styles/variables";
+
+.container {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  background-color: $lavender;
+
+  gap: 32px;
+  padding: 128px 20%;
+}
+
+.avatarWrapper {
+  position: relative;
+  min-width: 260px;
+  height: 300px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.description {
+  color: $medium-gray;
+}
+
+.socials {
+  display: flex;
+
+  gap: 16px;
+}
+
+.topBar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 60%;
+  height: 23px;
+}
+
+.yellowBar {
+  background-color: $yellow;
+  width: 70%;
+}
+
+.purpleBar {
+  background-color: $purple;
+  width: 30%;
+}
