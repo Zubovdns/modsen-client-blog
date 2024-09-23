@@ -1,11 +1,12 @@
 import { Blog } from "@interfaces/blog.interface";
+import { categories } from "@interfaces/category.interface";
 
 import { authors_mock } from "./authors-mock";
 
 export const posts_mock: Blog[] = [
   {
     id: "1",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -50,7 +51,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "2",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[1],
     publish_date: new Date("2023-04-21"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -95,7 +96,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "3",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[2],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -140,7 +141,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "4",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[3],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -185,7 +186,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "5",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -230,7 +231,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "6",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[2],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -275,7 +276,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "7",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[3],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -320,7 +321,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "8",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -365,7 +366,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "9",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[2],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -410,7 +411,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "10",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[3],
     publish_date: new Date("2023-05-1"),
     title: "8 Figma design systems that you can download for free today.",
@@ -455,7 +456,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "11",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
@@ -500,7 +501,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "12",
-    category: "startup",
+    category: categories.Startup,
     author: authors_mock[0],
     publish_date: new Date("2022-05-23"),
     title: "Step-by-step guide to choosing great font pairs",
