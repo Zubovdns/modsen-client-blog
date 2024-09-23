@@ -1,0 +1,77 @@
+@import "@styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  margin: 0 calc(20% - 32px);
+
+  gap: 32px;
+}
+
+.title {
+  padding: 0 32px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 32px;
+  gap: 32px;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    background-color: $light-yellow;
+    transform: scale(1.05);
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  min-width: 400px;
+  height: 320px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.category {
+  color: $purple;
+}
+
+.description {
+  color: $medium-gray;
+}
+
+.placeholderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 calc(20% - 32px);
+}

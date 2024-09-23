@@ -224,5 +224,10 @@
         "alt": "Emily Nguyen's avatar"
       }
     }
+  },
+
+  "AuthorPosts": {
+    "title": "My posts",
+    "placeholder": "There will be posts here as soon as the author publishes them."
   }
 }
