@@ -1,6 +1,6 @@
 import { Author } from "@interfaces/author.interface";
 
-export type category = "startup" | "business" | "economy" | "technology";
+import { Category } from "./category.interface";
 
 export interface BlogContentBlock {
   type: "heading" | "paragraph";
@@ -11,7 +11,7 @@ export interface Blog {
   id: string;
   author: Author;
   publish_date: Date;
-  category: category;
+  category: Category;
   title: string;
   title_image: string;
   description: string;
