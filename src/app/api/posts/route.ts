@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { posts_mock } from "@/mocks/posts-mock";
+import { getValidTags, normalizeTag } from "@utils/normalize-tag";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = request.nextUrl;
@@ -14,14 +15,7 @@ export async function GET(request: NextRequest) {
   const parsedPage = page ? parseInt(page, 10) : null;
 
   if (category) {
-    const normalizeTag = (tag: string) =>
-      tag
-        .toLowerCase()
-        .trim()
-        .replace(/[^a-zA-Z0-9]/g, "");
-
-    const validTags =
-      tags?.filter((tag) => tag.trim() !== "").map(normalizeTag) || [];
+    const validTags = getValidTags(tags);
 
     const posts = posts_mock.filter((post) => {
       const isCategoryMatch = post.category === category;
