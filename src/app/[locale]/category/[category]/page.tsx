@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import { CategoryBanner } from "@components/category-banner/category-banner";
+import { CategorySearch } from "@components/category-search/category-search";
 import { categories } from "@interfaces/category.interface";
 
 import styles from "./page.module.scss";
@@ -16,6 +17,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
   return (
     <div className={styles.page}>
       <CategoryBanner category={category} />
+      <CategorySearch category={category} />
     </div>
   );
 }

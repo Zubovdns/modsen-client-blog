@@ -229,5 +229,18 @@
   "AuthorPosts": {
     "title": "My posts",
     "placeholder": "There will be posts here as soon as the author publishes them."
+  },
+
+  "CategoryPage": {
+    "tags": {
+      "title": "All tags",
+      "placeholder": "Search for tag..."
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "placeholder": {
+      "message": "We can't find anything matching your request. Try changing your request and try again."
+    }
   }
 }
