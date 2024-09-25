@@ -3,16 +3,16 @@ import Image from "next/image";
 import { Link } from "@i18n/routing";
 import typography from "@styles/typography.module.scss";
 
-import styles from "./category-search-item.module.scss";
-import { CategorySearchItemProps } from "./category-search-item.type";
+import styles from "./category-post-item.module.scss";
+import { CategoryPostItemProps } from "./category-post-item.type";
 
-export const CategorySearchItem = ({
+export const CategoryPostItem = ({
   category,
   description,
   id,
   image,
   title,
-}: CategorySearchItemProps) => (
+}: CategoryPostItemProps) => (
   <Link className={styles.card} href={`/blog/${id}`}>
     <div className={styles.imageWrapper}>
       <Image
