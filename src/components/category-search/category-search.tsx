@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import classNames from "classnames";
 
 import { categories } from "@/constants/categories.constant";
+import { tags } from "@/constants/tags.constatn";
 import { getPostsByCategory } from "@/service/posts/get-posts-by-category";
 import { FormInput } from "@components/form-input/form-input";
 import { Loader } from "@components/loader/loader";
@@ -18,12 +20,27 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
   const [posts, setPosts] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const [tagValue, setTagValue] = useState("");
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [debouncedTagValue, setDebouncedTagValue] = useState(tagValue);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedTagValue(tagValue);
+    }, 500);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [tagValue]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         setLoading(true);
-        const fetchedPosts = await getPostsByCategory(category, []);
+        const fetchedPosts = await getPostsByCategory(category, [
+          ...selectedTags,
+          debouncedTagValue,
+        ]);
         setPosts(fetchedPosts);
       } catch (error) {
         console.error("Failed to load posts: " + error);
@@ -33,11 +50,21 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
     };
 
     fetchPosts();
-  }, [category]);
+  }, [category, selectedTags, debouncedTagValue]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setTagValue(e.target.value);
   };
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prevTags) =>
+      prevTags.includes(tag)
+        ? prevTags.filter((t) => t !== tag)
+        : [...prevTags, tag],
+    );
+  };
+
+  const isSelected = (tag: string) => selectedTags.includes(tag);
 
   return (
     <div className={styles.container}>
@@ -69,7 +96,7 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
             className={styles.search}
           />
         </div>
-        <div className={styles.categoryContainer}>
+        <div className={styles.categoryList}>
           <h2 className={typography.Heading2}>Categories</h2>
           <div className={styles.categoryList}>
             {Object.entries(categories).map(([categoryKey, { icon }]) => (
@@ -81,7 +108,24 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
             ))}
           </div>
         </div>
-        <div></div>
+        <div className={styles.categoryList}>
+          <h2 className={typography.Heading2}>All tags</h2>
+          <div className={styles.tagList}>
+            {Object.values(tags).map((tag) => (
+              <div
+                key={tag}
+                className={classNames(
+                  typography.body2,
+                  styles.tagItem,
+                  isSelected(tag) && styles.selectedTag,
+                )}
+                onClick={() => toggleTag(tag)}
+              >
+                {tag}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

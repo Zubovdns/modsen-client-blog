@@ -14,13 +14,25 @@ export async function GET(request: NextRequest) {
   const parsedPage = page ? parseInt(page, 10) : null;
 
   if (category) {
-    const validTags = tags?.filter((tag) => tag.trim() !== "") || [];
+    const normalizeTag = (tag: string) =>
+      tag
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-zA-Z0-9]/g, "");
+
+    const validTags =
+      tags?.filter((tag) => tag.trim() !== "").map(normalizeTag) || [];
 
     const posts = posts_mock.filter((post) => {
       const isCategoryMatch = post.category === category;
+
+      const normalizedPostTags = post.tags.map(normalizeTag);
+
       const isTagsMatch =
         validTags.length === 0 ||
-        validTags.some((tag) => post.tags.includes(tag));
+        validTags.every((tag) =>
+          normalizedPostTags.some((postTag) => postTag.includes(tag)),
+        );
 
       return isCategoryMatch && isTagsMatch;
     });
