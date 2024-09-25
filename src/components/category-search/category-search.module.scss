@@ -17,6 +17,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 
 .filterPanel {
@@ -109,5 +112,27 @@
   &:hover {
     background-color: $dark-yellow;
     border-color: $dark-yellow;
+  }
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  height: 100%;
+
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

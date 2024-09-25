@@ -238,6 +238,9 @@
     },
     "categories": {
       "title": "Categories"
+    },
+    "placeholder": {
+      "message": "We can't find anything matching your request. Try changing your request and try again."
     }
   }
 }

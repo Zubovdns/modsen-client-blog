@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 "use client";
 
 import { useEffect, useState } from "react";
@@ -67,6 +68,10 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
     );
   };
 
+  const handleTagSelected = (tag: tags) => () => {
+    toggleTag(tag);
+  };
+
   const isSelected = (tag: string) => selectedTags.includes(tag);
 
   return (
@@ -75,6 +80,10 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
         {loading ? (
           <div className={styles.loaderContainer}>
             <Loader />
+          </div>
+        ) : posts.length === 0 ? (
+          <div className={styles.placeholder}>
+            <p className={typography.Heading3}>{t("placeholder.message")}</p>
           </div>
         ) : (
           posts.map(({ id, title_image, title, description, category }) => (
@@ -122,7 +131,7 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
                   styles.tagItem,
                   isSelected(tag) && styles.selectedTag,
                 )}
-                onClick={() => toggleTag(tag)}
+                onClick={handleTagSelected(tag)}
               >
                 {tag}
               </div>
