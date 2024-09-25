@@ -52,7 +52,7 @@ export const posts_mock: Blog[] = [
   },
   {
     id: "2",
-    category: categories.Startup,
+    category: categories.Business,
     author: authors_mock[1],
     publish_date: new Date("2023-04-21"),
     title: "Step-by-step guide to choosing great font pairs",

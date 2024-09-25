@@ -14,12 +14,14 @@ export async function GET(request: NextRequest) {
   const parsedPage = page ? parseInt(page, 10) : null;
 
   if (category) {
+    const validTags = tags?.filter((tag) => tag.trim() !== "") || [];
+
     const posts = posts_mock.filter((post) => {
       const isCategoryMatch = post.category === category;
       const isTagsMatch =
-        !tags ||
-        tags.length === 0 ||
-        tags.some((tag) => post.tags.includes(tag));
+        validTags.length === 0 ||
+        validTags.some((tag) => post.tags.includes(tag));
+
       return isCategoryMatch && isTagsMatch;
     });
 
