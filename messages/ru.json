@@ -226,5 +226,15 @@
   "AuthorPosts": {
     "title": "Мои посты",
     "placeholder": "Здесь будут посты как только автор их опубликует"
+  },
+
+  "CategoryPage": {
+    "tags": {
+      "title": "Все метки",
+      "placeholder": "Искать по метке..."
+    },
+    "categories": {
+      "title": "Категории"
+    }
   }
 }

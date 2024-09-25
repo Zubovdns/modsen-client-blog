@@ -229,5 +229,15 @@
   "AuthorPosts": {
     "title": "My posts",
     "placeholder": "There will be posts here as soon as the author publishes them."
+  },
+
+  "CategoryPage": {
+    "tags": {
+      "title": "All tags",
+      "placeholder": "Search for tag..."
+    },
+    "categories": {
+      "title": "Categories"
+    }
   }
 }

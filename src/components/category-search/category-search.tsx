@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 import classNames from "classnames";
 
 import { categories } from "@/constants/categories.constant";
@@ -22,6 +23,8 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
   const [tagValue, setTagValue] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [debouncedTagValue, setDebouncedTagValue] = useState(tagValue);
+
+  const t = useTranslations("CategoryPage");
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -92,12 +95,12 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
             onChange={handleInputChange}
             type="text"
             value={tagValue}
-            placeholder="Search for tag..."
+            placeholder={t("tags.placeholder")}
             className={styles.search}
           />
         </div>
         <div className={styles.categoryList}>
-          <h2 className={typography.Heading2}>Categories</h2>
+          <h2 className={typography.Heading2}>{t("categories.title")}</h2>
           <div className={styles.categoryList}>
             {Object.entries(categories).map(([categoryKey, { icon }]) => (
               <CategoryItem
@@ -109,7 +112,7 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
           </div>
         </div>
         <div className={styles.categoryList}>
-          <h2 className={typography.Heading2}>All tags</h2>
+          <h2 className={typography.Heading2}>{t("tags.title")}</h2>
           <div className={styles.tagList}>
             {Object.values(tags).map((tag) => (
               <div
