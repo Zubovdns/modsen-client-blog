@@ -51,6 +51,9 @@ export const Footer = () => {
           <NavLink href={t("nav.contact-us.href")}>
             {t("nav.contact-us.title")}
           </NavLink>
+          <NavLink href={t("nav.privacy-policy.href")}>
+            {t("nav.privacy-policy.title")}
+          </NavLink>
         </nav>
       </div>
       <div className={styles.middleContainer}>

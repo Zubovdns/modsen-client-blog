@@ -41,6 +41,10 @@
       "contact-us": {
         "title": "Контакты",
         "href": "/contact-us"
+      },
+      "privacy-policy": {
+        "title": "Политика Конфиденциальности",
+        "href": "/privacy-policy"
       }
     },
     "input-placeholder": "Введите свою почту",

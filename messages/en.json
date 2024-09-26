@@ -41,6 +41,10 @@
       "contact-us": {
         "title": "Contact us",
         "href": "/contact-us"
+      },
+      "privacy-policy": {
+        "title": "Privacy Policy",
+        "href": "/privacy-policy"
       }
     },
     "input-placeholder": "Enter Your Email",
