@@ -3,8 +3,8 @@
 import { useForm } from "react-hook-form";
 import { useTranslations } from "next-intl";
 import classNames from "classnames";
-import * as yup from "yup";
 
+import { contactUsFormSchema } from "@/schemes/contact-us-form.schema";
 import { Button } from "@components/button/button";
 import { FormInput } from "@components/form-input/form-input";
 import { FormTextArea } from "@components/form-text-area/form-text-area";
@@ -14,15 +14,6 @@ import typography from "@styles/typography.module.scss";
 import styles from "./contact-form.module.scss";
 import { ContactFormData } from "./contact-form.type";
 
-const schema = yup.object().shape({
-  name: yup.string().required("Name is required"),
-  email: yup
-    .string()
-    .email("Invalid email format")
-    .required("Email is required"),
-  message: yup.string().required("Message is required"),
-});
-
 export const ContactForm = () => {
   const t = useTranslations("ContactUsPage");
 
@@ -31,7 +22,7 @@ export const ContactForm = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<ContactFormData>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(contactUsFormSchema),
   });
 
   const onSubmit = (data: ContactFormData) => {
