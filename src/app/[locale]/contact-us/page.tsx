@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { getTranslations } from "next-intl/server";
 import classNames from "classnames";
 
@@ -5,6 +6,16 @@ import { ContactForm } from "@components/contact-form/contact-form";
 import typography from "@styles/typography.module.scss";
 
 import styles from "./page.module.scss";
+
+const ContactMap = dynamic(
+  () =>
+    import("@components/contact-map/contact-map").then(
+      (module) => module.ContactMap,
+    ),
+  {
+    ssr: false,
+  },
+);
 
 export default async function ContactUs() {
   const t = await getTranslations("ContactUsPage");
@@ -62,6 +73,7 @@ export default async function ContactUs() {
         </div>
       </div>
       <ContactForm />
+      <ContactMap />
     </div>
   );
 }
