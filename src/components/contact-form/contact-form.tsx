@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useTranslations } from "next-intl";
 import classNames from "classnames";
 import * as yup from "yup";
 
@@ -23,6 +24,8 @@ const schema = yup.object().shape({
 });
 
 export const ContactForm = () => {
+  const t = useTranslations("ContactUsPage");
+
   const {
     register,
     handleSubmit,
@@ -41,7 +44,7 @@ export const ContactForm = () => {
         <FormInput
           {...register("name")}
           type="text"
-          placeholder="Your Name"
+          placeholder={t("input.placeholder.name")}
           className={styles.input}
         />
         {errors.name && (
@@ -55,7 +58,7 @@ export const ContactForm = () => {
         <FormInput
           {...register("email")}
           type="email"
-          placeholder="Your Email"
+          placeholder={t("input.placeholder.email")}
           className={styles.input}
         />
         {errors.email && (
@@ -68,7 +71,7 @@ export const ContactForm = () => {
       <div className={classNames(styles.inputContainer)}>
         <FormTextArea
           {...register("message")}
-          placeholder="Your Message"
+          placeholder={t("input.placeholder.message")}
           className={classNames(styles.input)}
         />
         {errors.message && (
@@ -79,7 +82,7 @@ export const ContactForm = () => {
       </div>
 
       <Button type="submit" className={styles.inputContainer}>
-        Send Message
+        {t("button.title")}
       </Button>
     </form>
   );
