@@ -5,7 +5,7 @@ export type FormTextAreaProps =
     onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
     onBlur?: (e: React.FocusEvent<HTMLTextAreaElement>) => void;
     value?: string;
-    ref?: React.Ref<HTMLTextAreaElement>; // Добавляем поддержку ref
+    ref?: React.Ref<HTMLTextAreaElement>;
     className?: string;
     placeholder?: string;
   };

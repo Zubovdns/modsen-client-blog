@@ -22,21 +22,23 @@ export const FormTextArea = React.forwardRef<
     }
   }, [textareaRef, value]);
 
+  const handleOnChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  };
+
   return (
     <textarea
       ref={textareaRef}
       className={`${typography.body1} ${styles.textarea} ${className}`}
       placeholder={placeholder}
       value={value}
-      onChange={(e) => {
-        if (onChange) {
-          onChange(e);
-        }
-        if (textareaRef.current) {
-          textareaRef.current.style.height = "auto";
-          textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
-        }
-      }}
+      onChange={handleOnChange}
       onBlur={onBlur}
       {...rest}
     />
