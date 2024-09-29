@@ -1,105 +1,216 @@
 @import "./variables";
 
-.Display {
+%heading {
   font-family: $font-family-base;
-  font-size: 56px;
   font-style: normal;
   font-weight: 700;
-  line-height: 64px;
   letter-spacing: -2px;
+  margin: 0;
+}
+
+%body {
+  font-family: $font-family-addition;
+  font-style: normal;
+}
+
+.Display {
+  @extend %heading;
+  font-size: 56px;
+  line-height: 64px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 .Heading1 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 64px;
-  letter-spacing: -2px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 40px;
+    line-height: 56px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 32px;
+    line-height: 44px;
+  }
 }
 
 .Heading2 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 36px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 48px;
-  letter-spacing: -2px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 32px;
+    line-height: 44px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 .Heading3 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 40px;
   letter-spacing: -1px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .Heading4 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 32px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 .Heading5 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 32px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .Heading6 {
-  font-family: $font-family-base;
+  @extend %heading;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
   line-height: 24px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .body1 {
-  font-family: $font-family-addition;
+  @extend %body;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 28px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
 .body2 {
-  font-family: $font-family-addition;
+  @extend %body;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
 
 .label {
-  font-family: $font-family-addition;
+  @extend %body;
   font-size: 14px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 10px;
+    line-height: 16px;
+  }
 }
 
 .cap {
-  font-family: $font-family-addition;
+  @extend %body;
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
 
 .cap3 {
-  font-family: $font-family-addition;
+  @extend %body;
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  @media #{map-get($device, tablet)} {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
