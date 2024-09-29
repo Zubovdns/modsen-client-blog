@@ -1,6 +1,12 @@
 import Image from "next/image";
 import classNames from "classnames";
 
+import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
+import { ListOfAuthors } from "@components/list-of-authors/list-of-authors";
+import PurpleShape from "@public/icons/shapes/purple-shape.svg";
+import YellowShape from "@public/icons/shapes/yellow-shape.svg";
+import ContentImage1 from "@public/images/about-us-1-image.png";
+import ContentImage2 from "@public/images/about-us-2-image.png";
 import BannerImage from "@public/images/why-we-started-image.png";
 import typography from "@styles/typography.module.scss";
 
@@ -86,7 +92,66 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className={styles.content}>
+        <div className={styles.contentDescription}>
+          <h2 className={typography.Heading2}>Our team of creatives</h2>
+          <h4 className={typography.Heading4}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </h4>
+          <p className={typography.body1}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+          </p>
+        </div>
+        <div className={styles.contentImageWrapper}>
+          <Image
+            src={ContentImage1}
+            alt="Content image 1"
+            className={styles.contentImage}
+            fill
+          />
+          <Image
+            src={YellowShape}
+            alt="Yellow shape"
+            className={styles.yellowShape}
+          />
+        </div>
+      </div>
+      <div className={styles.content}>
+        <div className={styles.contentImageWrapper}>
+          <Image
+            src={ContentImage2}
+            alt="Content image 2"
+            className={styles.contentImage}
+            fill
+          />
+          <Image
+            src={PurpleShape}
+            alt="Purple shape"
+            className={styles.purpleShape}
+          />
+        </div>
+        <div className={styles.contentDescription}>
+          <h2 className={typography.Heading2}>Why we started this Blog</h2>
+          <h4 className={typography.Heading4}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </h4>
+          <p className={typography.body1}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+          </p>
+        </div>
+      </div>
+      <ListOfAuthors />
+      <JoinOurTeamBanner />
     </div>
   );
 }

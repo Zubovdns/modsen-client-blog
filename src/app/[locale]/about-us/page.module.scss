@@ -155,3 +155,49 @@
 .bannerDescription {
   color: $medium-gray;
 }
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 480px;
+  margin: 0 80px;
+
+  gap: 128px;
+}
+
+.contentDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  gap: 16px;
+
+  flex: 1;
+}
+
+.contentImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  flex: 1.2;
+}
+
+.contentImage {
+  object-fit: cover;
+}
+
+.yellowShape {
+  position: absolute;
+  top: 90px;
+  left: -50px;
+}
+
+.purpleShape {
+  position: absolute;
+  bottom: -37px;
+  left: 180px;
+}
