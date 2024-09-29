@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import classNames from "classnames";
 
 import { JoinOurTeamBanner } from "@components/join-our-team-banner/join-our-team-banner";
@@ -12,23 +13,20 @@ import typography from "@styles/typography.module.scss";
 
 import styles from "./page.module.scss";
 
-export default function AboutUs() {
+export default async function AboutUs() {
+  const t = await getTranslations("AboutUsPage");
+
   return (
     <div className={styles.page}>
       <div className={styles.bannerContainer}>
         <div className={styles.bannerTop}>
           <div className={styles.bannerTopHeader}>
-            <p className={typography.cap3}>About us</p>
-            <h1 className={typography.Heading1}>
-              We are a team of content writers who share their learnings
-            </h1>
+            <p className={typography.cap3}>{t("banner.header.heading")}</p>
+            <h1 className={typography.Heading1}>{t("banner.header.title")}</h1>
           </div>
           <div className={styles.bannerTopDescription}>
             <p className={classNames(styles.body1, styles.bannerDescription)}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              {t("banner.header.description")}
             </p>
           </div>
         </div>
@@ -43,15 +41,21 @@ export default function AboutUs() {
             <div className={styles.statistics}>
               <div className={styles.statisticsItem}>
                 <h1 className={typography.Display}>12+</h1>
-                <p className={typography.body1}>Blogs Published</p>
+                <p className={typography.body1}>
+                  {t("statistics.blogsPublished")}
+                </p>
               </div>
               <div className={styles.statisticsItem}>
                 <h1 className={typography.Display}>18K+</h1>
-                <p className={typography.body1}>Views on Finsweet</p>
+                <p className={typography.body1}>
+                  {t("statistics.viewsOnFinsweet")}
+                </p>
               </div>
               <div className={styles.statisticsItem}>
                 <h1 className={typography.Display}>30K+</h1>
-                <p className={typography.body1}>Total active Users</p>
+                <p className={typography.body1}>
+                  {t("statistics.totalActiveUsers")}
+                </p>
               </div>
             </div>
             <div className={styles.topBar}>
@@ -62,31 +66,25 @@ export default function AboutUs() {
           <div className={styles.missionVision}>
             <div className={`${styles.bannerSection}`}>
               <p className={`${typography.cap} ${styles.bannerHeading}`}>
-                Our mission
+                {t("missionVision.mission.heading")}
               </p>
               <h2 className={`${typography.Heading2}`}>
-                Creating valuable content for creatives all around the world
+                {t("missionVision.mission.title")}
               </h2>
               <p className={`${typography.body1} ${styles.bannerDescription}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
-                blandit massa enim nec. Scelerisque viverra mauris in aliquam
-                sem. At risus viverra adipiscing at in tellus.
+                {t("missionVision.mission.description")}
               </p>
             </div>
 
             <div className={`${styles.bannerSection}`}>
               <p className={`${typography.cap} ${styles.bannerHeading}`}>
-                Our Vision
+                {t("missionVision.vision.heading")}
               </p>
               <h3 className={`${typography.Heading3}`}>
-                A platform that empowers individuals to improve
+                {t("missionVision.vision.title")}
               </h3>
               <p className={`${typography.body1} ${styles.bannerDescription}`}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Non
-                blandit massa enim nec. Scelerisque viverra mauris in aliquam
-                sem. At risus viverra adipiscing at in tellus.
+                {t("missionVision.vision.description")}
               </p>
             </div>
           </div>
@@ -94,18 +92,11 @@ export default function AboutUs() {
       </div>
       <div className={styles.content}>
         <div className={styles.contentDescription}>
-          <h2 className={typography.Heading2}>Our team of creatives</h2>
+          <h2 className={typography.Heading2}>{t("content.ourTeamTitle")}</h2>
           <h4 className={typography.Heading4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            {t("content.ourTeamSubtitle")}
           </h4>
-          <p className={typography.body1}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-          </p>
+          <p className={typography.body1}>{t("content.ourTeamDescription")}</p>
         </div>
         <div className={styles.contentImageWrapper}>
           <Image
@@ -136,17 +127,14 @@ export default function AboutUs() {
           />
         </div>
         <div className={styles.contentDescription}>
-          <h2 className={typography.Heading2}>Why we started this Blog</h2>
+          <h2 className={typography.Heading2}>
+            {t("content.whyWeStartedTitle")}
+          </h2>
           <h4 className={typography.Heading4}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt.
+            {t("content.whyWeStartedSubtitle")}
           </h4>
           <p className={typography.body1}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat.
+            {t("content.whyWeStartedDescription")}
           </p>
         </div>
       </div>
