@@ -38,7 +38,7 @@ export const ContactForm = () => {
           placeholder={t("input.placeholder.name")}
           className={styles.input}
         />
-        {errors.name && (
+        {!!errors.name && (
           <p className={classNames(typography.body1, styles.error)}>
             {errors.name.message}
           </p>
@@ -52,7 +52,7 @@ export const ContactForm = () => {
           placeholder={t("input.placeholder.email")}
           className={styles.input}
         />
-        {errors.email && (
+        {!!errors.email && (
           <p className={classNames(typography.body1, styles.error)}>
             {errors.email.message}
           </p>
@@ -65,7 +65,7 @@ export const ContactForm = () => {
           placeholder={t("input.placeholder.message")}
           className={classNames(styles.input)}
         />
-        {errors.message && (
+        {!!errors.message && (
           <p className={classNames(typography.body1, styles.error)}>
             {errors.message.message}
           </p>
