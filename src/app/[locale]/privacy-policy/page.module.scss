@@ -14,19 +14,21 @@
   justify-content: center;
 
   background-color: $lavender;
-
   padding: 80px 10%;
   gap: 4px;
-
   text-align: center;
-}
 
-.bannerTitle {
-  text-transform: capitalize;
-}
+  @media #{map-get($device, tablet)} {
+    padding: 60px 8%;
+  }
 
-.bannerDescription {
-  opacity: 0.6;
+  @media #{map-get($device, mobile-l)} {
+    padding: 40px 5%;
+  }
+
+  @media #{map-get($device, mobile-s)} {
+    padding: 30px 4%;
+  }
 }
 
 .container {
@@ -34,11 +36,25 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
   gap: 32px;
-
   padding: 128px 25%;
   text-align: left;
+
+  @media #{map-get($device, laptop)} {
+    padding: 96px 15%;
+  }
+
+  @media #{map-get($device, tablet)} {
+    padding: 80px 10%;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 60px 5%;
+  }
+
+  @media #{map-get($device, mobile-s)} {
+    padding: 40px 4%;
+  }
 }
 
 .text {
