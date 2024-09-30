@@ -299,5 +299,39 @@
       "whyWeStartedSubtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
       "whyWeStartedDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
     }
+  },
+
+  "ContactUsPage": {
+    "header": {
+      "header": "Свяжитесь с нами",
+      "title": "Давайте начнем разговор"
+    },
+    "workingHours": {
+      "header": "Рабочие часы",
+      "content": {
+        "days": "С понедельника по пятницу",
+        "hours": "с 9:00 до 20:00",
+        "supportInfo": "Наша служба поддержки работает круглосуточно"
+      }
+    },
+    "contactUs": {
+      "header": "Контакты",
+      "content": {
+        "phone": "020 7993 2905",
+        "email": "hello@finsweet.com"
+      }
+    },
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+
+    "input": {
+      "placeholder": {
+        "name": "Ваше имя",
+        "email": "Ваш Email",
+        "message": "Ваше сообщение"
+      }
+    },
+    "button": {
+      "title": "Отправить сообщение"
+    }
   }
 }
