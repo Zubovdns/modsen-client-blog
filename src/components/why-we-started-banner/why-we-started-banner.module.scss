@@ -57,22 +57,14 @@
   @media #{map-get($device, laptop)} {
     position: relative;
     right: 0;
-    top: -80px;
+    bottom: 160px;
     max-width: 80%;
     padding: 40px;
-    margin-top: -160px;
   }
 
   @media #{map-get($device, mobile-l)} {
-    top: -60px;
+    bottom: 60px;
     padding: 24px;
-    margin-top: -120px;
-  }
-
-  @media #{map-get($device, mobile-s)} {
-    top: -40px;
-    padding: 16px;
-    margin-top: -80px;
   }
 }
 
