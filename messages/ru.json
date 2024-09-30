@@ -266,6 +266,41 @@
     }
   },
 
+  "AboutUsPage": {
+    "banner": {
+      "header": {
+        "heading": "О нас",
+        "title": "Мы — команда авторов контента, которые делятся своими знаниями",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }
+    },
+    "statistics": {
+      "blogsPublished": "Опубликовано блогов",
+      "viewsOnFinsweet": "Просмотры на Finsweet",
+      "totalActiveUsers": "Всего активных пользователей"
+    },
+    "missionVision": {
+      "mission": {
+        "heading": "Наша миссия",
+        "title": "Создавать ценный контент для творческих людей по всему миру",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      },
+      "vision": {
+        "heading": "Наше видение",
+        "title": "Платформа, которая помогает людям совершенствоваться",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non blandit massa enim nec. Scelerisque viverra mauris in aliquam sem. At risus viverra adipiscing at in tellus."
+      }
+    },
+    "content": {
+      "ourTeamTitle": "Наша команда творческих людей",
+      "ourTeamSubtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "ourTeamDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.",
+      "whyWeStartedTitle": "Почему мы начали этот блог",
+      "whyWeStartedSubtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
+      "whyWeStartedDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+    }
+  },
+
   "ContactUsPage": {
     "header": {
       "header": "Свяжитесь с нами",
