@@ -28,6 +28,10 @@
   flex: 1;
   height: 100%;
   position: relative;
+
+  @media #{map-get($device, laptop)} {
+    display: none;
+  }
 }
 
 .image {

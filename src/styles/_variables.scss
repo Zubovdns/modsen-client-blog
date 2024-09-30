@@ -28,7 +28,7 @@ $device: (
   mobile-l: "(max-width: 425px)",
   tablet: "(max-width: 768px)",
   laptop: "(max-width: 1024px)",
-  desktop: "(min-width: 1025px)",
-  large-desktop: "(min-width: 1440px)",
+  desktop: "(max-width: 1025px)",
+  large-desktop: "(max-width: 1440px)",
   ultra-desktop: "(min-width: 1920px)",
 );
