@@ -4,10 +4,25 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   padding: 80px;
   gap: 142px;
   background-color: $lavender;
+
+  @media #{map-get($device, laptop)} {
+    padding: 60px;
+    gap: 100px;
+  }
+
+  @media #{map-get($device, tablet)} {
+    padding: 40px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 24px;
+    gap: 16px;
+  }
 }
 
 .content {
@@ -15,12 +30,18 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-
   gap: 16px;
-
   text-align: left;
-
   flex: 1.4;
+
+  @media #{map-get($device, tablet)} {
+    align-items: center;
+    text-align: center;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    gap: 12px;
+  }
 }
 
 .category {
@@ -29,10 +50,18 @@
 
 .title {
   padding: 8px 0;
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 1.75rem;
+  }
 }
 
 .metaInfo {
   color: $dark-gray;
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 0.875rem;
+  }
 }
 
 .author {
@@ -41,16 +70,28 @@
 
 .description {
   color: $medium-gray;
+
+  @media #{map-get($device, mobile-l)} {
+    font-size: 1rem;
+  }
 }
 
 .button {
   margin: 32px 4px;
+
+  @media #{map-get($device, mobile-l)} {
+    margin: 24px 0;
+  }
 }
 
 .imageWrapper {
   flex: 1;
   position: relative;
   height: 480px;
+
+  @media #{map-get($device, tablet)} {
+    display: none;
+  }
 }
 
 .image {
