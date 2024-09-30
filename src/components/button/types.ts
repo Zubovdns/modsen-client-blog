@@ -3,4 +3,5 @@ export type ButtonProps = {
   onClick?: () => void;
   children?: React.ReactNode;
   href?: string;
+  type?: "button" | "submit" | "reset";
 };

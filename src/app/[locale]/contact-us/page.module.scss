@@ -1,0 +1,75 @@
+@import "@styles/variables";
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+
+  gap: 64px;
+  padding-top: 128px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin: 0 25%;
+
+  text-align: center;
+}
+
+.headerDescription {
+  color: $medium-gray;
+}
+
+.informationContainer {
+  position: relative;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 70px;
+  padding: 64px 48px;
+  margin: 0 25%;
+
+  background-color: $purple;
+  color: $light;
+}
+
+.information {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 16px;
+
+  flex: 1;
+}
+
+.informationContent {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.informationHeader {
+  width: 100%;
+  border-bottom: 1px solid rgba($light, 0.1);
+  padding-bottom: 16px;
+}
+
+.lightText {
+  opacity: 0.6;
+}
