@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import classNames from "classnames";
 import * as Yup from "yup";
 
 import { emailSchema } from "@/schemes/email.schema";
@@ -20,20 +21,23 @@ import styles from "./footer.module.scss";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null); // состояние ошибки
   const t = useTranslations("Footer");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
+    setError(null); // сбрасываем ошибку при изменении
   };
 
   const handleSubmit = async () => {
     try {
       setEmail("");
+      setError(null);
       await emailSchema.validate({ email });
       sendEmail(email);
     } catch (validationError) {
       if (validationError instanceof Yup.ValidationError) {
-        console.error(validationError.message);
+        setError(validationError.message); // сохраняем сообщение об ошибке
       }
     }
   };
@@ -69,6 +73,11 @@ export const Footer = () => {
             placeholder={t("input-placeholder")}
           />
           <Button onClick={handleSubmit}>{t("button")}</Button>
+          {error && (
+            <p className={classNames(typography.body1, styles.errorMessage)}>
+              {error}
+            </p>
+          )}
         </div>
       </div>
       <div className={styles.bottomContainer}>
