@@ -31,7 +31,7 @@ export const BlogListOfPosts = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       setIsLoading(true);
-      const data = await getPostsByPage(page);
+      const data = await getPostsByPage(page, window.location.origin);
 
       setData(data);
       setIsLoading(false);

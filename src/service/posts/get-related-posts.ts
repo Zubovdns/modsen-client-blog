@@ -6,8 +6,11 @@ type ReceivedData = {
   hasMore: boolean;
 };
 
-export const getRelatedPosts = async (id: string): Promise<ReceivedData> => {
-  const baseUrl = getBaseUrl();
+export const getRelatedPosts = async (
+  id: string,
+  url?: string,
+): Promise<ReceivedData> => {
+  const baseUrl = url || getBaseUrl();
 
   try {
     const response = await fetch(`${baseUrl}/api/posts/?limit=3&id=${id}`);

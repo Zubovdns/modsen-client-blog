@@ -1,8 +1,8 @@
 import { Blog } from "@interfaces/blog.interface";
 import { getBaseUrl } from "@utils/get-base-url";
 
-export const getPostsByAuthorId = async (id: string) => {
-  const baseUrl = getBaseUrl();
+export const getPostsByAuthorId = async (id: string, url?: string) => {
+  const baseUrl = url || getBaseUrl();
 
   try {
     const response = await fetch(`${baseUrl}/api/posts/?authorId=${id}`);

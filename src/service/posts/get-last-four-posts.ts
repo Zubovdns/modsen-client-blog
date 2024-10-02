@@ -6,8 +6,8 @@ type ReceivedData = {
   hasMore: boolean;
 };
 
-export const getLastFourPosts = async (): Promise<ReceivedData> => {
-  const baseUrl = getBaseUrl();
+export const getLastFourPosts = async (url?: string): Promise<ReceivedData> => {
+  const baseUrl = url || getBaseUrl();
 
   try {
     const response = await fetch(`${baseUrl}/api/posts/?limit=4`);

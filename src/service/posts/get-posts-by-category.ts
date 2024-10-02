@@ -5,8 +5,9 @@ import { getBaseUrl } from "@utils/get-base-url";
 export const getPostsByCategory = async (
   category: Category,
   tags: string[],
+  url?: string,
 ) => {
-  const baseUrl = getBaseUrl();
+  const baseUrl = url || getBaseUrl();
 
   try {
     const response = await fetch(
