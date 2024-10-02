@@ -5,35 +5,21 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-
   gap: 128px;
-
   padding-top: 80px;
   padding-bottom: 128px;
-}
 
-.bannerContainer {
-  display: flex;
-  flex-direction: column;
+  @media #{map-get($device, tablet)} {
+    gap: 64px;
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
 
-  padding: 0 80px;
-}
-
-.bannerTop {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  margin: 0 200px;
-  margin-bottom: -80px;
-}
-
-.bannerTopDescription {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  @media #{map-get($device, mobile-l)} {
+    gap: 32px;
+    padding-top: 20px;
+    padding-bottom: 32px;
+  }
 }
 
 .bannerTopHeader {
@@ -50,30 +36,10 @@
   flex: 1.2;
 
   z-index: 2;
-}
 
-.banner {
-  background-color: $lavender;
-
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-}
-
-.overview {
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-
-  padding: 0 5%;
-
-  width: 100%;
-  height: 450px;
+  @media #{map-get($device, laptop)} {
+    padding: 0;
+  }
 }
 
 .image {
@@ -84,25 +50,6 @@
   width: 100%;
 
   z-index: 1;
-}
-
-.statistics {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  z-index: 2;
-
-  background-color: $yellow;
-}
-
-.statisticsItem {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-
-  padding: 30px 40px;
 }
 
 .topBar {
@@ -120,19 +67,6 @@
 .purpleBar {
   background-color: $purple;
   width: 30%;
-}
-
-.missionVision {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  width: 100%;
-
-  gap: 82px;
-  padding: 96px 5%;
-
-  background-color: $lavender;
 }
 
 .bannerSection {
@@ -156,17 +90,6 @@
   color: $medium-gray;
 }
 
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 480px;
-  margin: 0 80px;
-
-  gap: 128px;
-}
-
 .contentDescription {
   display: flex;
   flex-direction: column;
@@ -176,14 +99,6 @@
   gap: 16px;
 
   flex: 1;
-}
-
-.contentImageWrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  flex: 1.2;
 }
 
 .contentImage {
@@ -200,4 +115,171 @@
   position: absolute;
   bottom: -37px;
   left: 180px;
+}
+
+.yellowShape,
+.purpleShape {
+  @media #{map-get($device, tablet)} {
+    display: none;
+  }
+}
+
+.bannerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 80px;
+
+  @media #{map-get($device, tablet)} {
+    padding: 0 40px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 0 20px;
+  }
+}
+
+.bannerTop {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 200px;
+  margin-bottom: -80px;
+
+  @media #{map-get($device, laptop)} {
+    flex-direction: column;
+    margin: 0;
+    gap: 16px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+  }
+
+  @media #{map-get($device, mobile-s)} {
+    gap: 8px;
+  }
+}
+
+.bannerTopDescription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  @media #{map-get($device, laptop)} {
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+
+.banner {
+  background-color: $lavender;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media #{map-get($device, tablet)} {
+    padding: 0;
+  }
+}
+
+.overview {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 5%;
+  width: 100%;
+  height: 450px;
+
+  @media #{map-get($device, tablet)} {
+    height: 300px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    height: 250px;
+  }
+}
+
+.statistics {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+  background-color: $yellow;
+
+  @media #{map-get($device, tablet)} {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    gap: 8px;
+  }
+}
+
+.statisticsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px 40px;
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 16px;
+  }
+}
+
+.missionVision {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 82px;
+  padding: 96px 5%;
+  background-color: $lavender;
+
+  @media #{map-get($device, tablet)} {
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 5%;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 480px;
+  margin: 0 80px;
+  gap: 128px;
+
+  @media #{map-get($device, tablet)} {
+    flex-direction: column;
+    gap: 64px;
+    margin: 0 40px;
+    height: auto;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    margin: 0 20px;
+  }
+}
+
+.contentImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex: 1.2;
+
+  @media #{map-get($device, tablet)} {
+    height: 300px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    height: 200px;
+  }
 }

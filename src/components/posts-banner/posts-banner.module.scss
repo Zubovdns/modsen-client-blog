@@ -4,50 +4,39 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
-
   gap: 32px;
-
   margin: 0 80px;
-}
 
-.featuredContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  @media #{map-get($device, laptop)} {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 40px;
+  }
 
-  gap: 32px;
-
-  flex: 1.5;
+  @media #{map-get($device, mobile-l)} {
+    margin: 0 24px;
+  }
 }
 
 .featuredHeader {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-
-.featuredPost {
-  width: 100%;
-
-  padding: 32px;
-
-  gap: 32px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-
-  border: 1px solid $light-gray;
 }
 
 .imageWrapper {
   width: 100%;
   height: 352px;
   position: relative;
+
+  @media #{map-get($device, mobile-l)} {
+    height: 240px;
+  }
+
+  @media #{map-get($device, mobile-m)} {
+    height: 200px;
+  }
 }
 
 .image {
@@ -57,13 +46,14 @@
 
 .featuredContent {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-
   gap: 16px;
+
+  @media #{map-get($device, mobile-l)} {
+    gap: 12px;
+  }
 }
 
 .metaInfo {
@@ -78,50 +68,30 @@
   color: $medium-gray;
 }
 
-.allContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-
-  gap: 32px;
-
-  flex: 1;
-}
-
 .allHeader {
   width: 100%;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media #{map-get($device, mobile-l)} {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .link {
   color: $purple;
 }
 
-.allPosts {
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .allItem {
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   padding: 32px;
   gap: 8px;
-
   cursor: pointer;
-
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
@@ -129,5 +99,72 @@
   &:hover {
     background-color: $light-yellow;
     transform: scale(1.05);
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 24px;
+  }
+
+  @media #{map-get($device, mobile-m)} {
+    padding: 16px;
+  }
+}
+
+@import "@styles/variables";
+
+.container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 32px;
+  margin: 0 80px;
+
+  @media #{map-get($device, tablet)} {
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 40px;
+  }
+
+  @media #{map-get($device, mobile-l)} {
+    margin: 0 24px;
+  }
+}
+
+.featuredContainer,
+.allContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
+  flex-grow: 1;
+}
+
+.featuredPost {
+  width: 100%;
+  padding: 32px;
+  gap: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid $light-gray;
+  flex-grow: 1;
+
+  @media #{map-get($device, mobile-l)} {
+    padding: 24px;
+    gap: 16px;
+  }
+}
+
+.allPosts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-grow: 1;
+
+  @media #{map-get($device, mobile-l)} {
+    gap: 16px;
   }
 }

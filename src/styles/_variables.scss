@@ -21,3 +21,14 @@ $fade: radial-gradient(
   rgba(0, 0, 0, 0) 0%,
   rgba(0, 0, 0, 0.6) 100%
 );
+
+$device: (
+  mobile-s: "(max-width: 320px)",
+  mobile-m: "(max-width: 375px)",
+  mobile-l: "(max-width: 425px)",
+  tablet: "(max-width: 768px)",
+  laptop: "(max-width: 1024px)",
+  desktop: "(max-width: 1025px)",
+  large-desktop: "(max-width: 1440px)",
+  ultra-desktop: "(min-width: 1920px)",
+);
