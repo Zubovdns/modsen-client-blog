@@ -74,12 +74,13 @@
   }
 
   .inputContainer {
+    position: relative;
     display: flex;
     gap: 24px;
 
     @media #{map-get($device, laptop)} {
       flex-direction: column;
-      gap: 16px;
+      gap: 36px;
     }
 
     @media #{map-get($device, mobile-l)} {
@@ -149,4 +150,11 @@
   @media #{map-get($device, tablet)} {
     width: 100%;
   }
+}
+
+.errorMessage {
+  position: absolute;
+  color: red;
+  top: 60px;
+  left: 10px;
 }
