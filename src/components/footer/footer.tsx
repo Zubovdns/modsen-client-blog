@@ -73,7 +73,7 @@ export const Footer = () => {
             placeholder={t("input-placeholder")}
           />
           <Button onClick={handleSubmit}>{t("button")}</Button>
-          {error && (
+          {!!error && (
             <p className={classNames(typography.body1, styles.errorMessage)}>
               {error}
             </p>
