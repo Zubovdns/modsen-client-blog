@@ -8,8 +8,9 @@ export type PostsReceivedData = {
 
 export const getPostsByPage = async (
   page: number,
+  url?: string,
 ): Promise<PostsReceivedData> => {
-  const baseUrl = getBaseUrl();
+  const baseUrl = url || getBaseUrl();
 
   try {
     const response = await fetch(`${baseUrl}/api/posts/?limit=5&page=${page}`);

@@ -41,10 +41,11 @@ export const CategorySearch = ({ category }: CategorySearchProps) => {
     const fetchPosts = async () => {
       try {
         setLoading(true);
-        const fetchedPosts = await getPostsByCategory(category, [
-          ...selectedTags,
-          debouncedTagValue,
-        ]);
+        const fetchedPosts = await getPostsByCategory(
+          category,
+          [...selectedTags, debouncedTagValue],
+          window.location.origin,
+        );
         setPosts(fetchedPosts);
       } catch (error) {
         console.error("Failed to load posts: " + error);
